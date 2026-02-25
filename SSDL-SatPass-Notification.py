@@ -562,7 +562,7 @@ if notify_type == "bysat":
             lines.append("良い観測条件の上空通過はありません．")
         lines.append("")
 
-    lines.append(f"📅 <https://www.kiyoaki.jp/wp-content/uploads/SatPass-KUPT-bright.ics|*カレンダーをダウンロード*>")
+    lines.append(f"📅 <https://github.com/kiyo-astro/SSDL-SatPass-Notification/raw/refs/heads/main/output/heavens-above/SatPass.ics|*カレンダーをダウンロード*>")
     lines.append(f"URLを照会カレンダーとして Appleカレンダー または Googleカレンダー に登録・表示できます．")
     lines.append(f"Data Provided by <https://www.heavens-above.com|Heavens-Above> / <https://www.meteoblue.com/en/weather/week/33.599N130.212E|Meteoblue> / <https://github.com/kiyo-astro/satphotometry_package/|SatPhotometry Library>")
     lines.append(f"This message is automatically sent by SSDL SatPass Notification System")
@@ -643,7 +643,7 @@ if notify_type == "bydate":
     else:
         lines.append("直近10日間に注目すべき人工天体の容易観測条件での上空通過はありません．")
         lines.append("")
-    lines.append(f"📅 <https://www.kiyoaki.jp/wp-content/uploads/SatPass-KUPT-bright.ics|*カレンダーをダウンロード*>")
+    lines.append(f"📅 <https://github.com/kiyo-astro/SSDL-SatPass-Notification/raw/refs/heads/main/output/heavens-above/SatPass.ics|*カレンダーをダウンロード*>")
     lines.append(f"URLを照会カレンダーとして Appleカレンダー または Googleカレンダー に登録・表示できます．")
     lines.append(f"")
     lines.append(f"Data Provided by <https://www.heavens-above.com|Heavens-Above> / <https://www.meteoblue.com/en/weather/week/33.599N130.212E|Meteoblue> / <https://github.com/kiyo-astro/satphotometry_package/|SatPhotometry Library>")
