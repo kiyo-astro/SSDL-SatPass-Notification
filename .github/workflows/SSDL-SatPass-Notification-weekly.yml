@@ -39,7 +39,7 @@ jobs:
           METEOBLUE_API_KEY: ${{ secrets.METEOBLUE_API_KEY }}
           SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
           TIME_WINDOW: evening
-          SEND_NOTICE: TRUE
+          SEND_NOTICE: ${{ secrets.SEND_NOTICE }}
           NOTIFY_TYPE: ${{ secrets.NOTIFY_TYPE }}
           TZ: Asia/Tokyo
         run: |
