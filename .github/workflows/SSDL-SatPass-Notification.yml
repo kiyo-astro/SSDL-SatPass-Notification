@@ -43,7 +43,7 @@ jobs:
           NOTIFY_TYPE: ${{ secrets.NOTIFY_TYPE }}
           TZ: Asia/Tokyo
         run: |
-          python SSDL-SatPass-Notification/SSDL-SatPass-Notification.py
+          python SSDL-SatPass-Notification.py
 
       - name: Commit and push outputs
         if: always()
