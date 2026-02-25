@@ -54,7 +54,7 @@ jobs:
 
           git config user.name "kiyo-astro"
           git config user.email "kiyoaki@uw.edu"
-          git add -A SSDL-SatPass-Notification/output SSDL-SatPass-Notification/tmp || true
+          git add -A output tmp || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
