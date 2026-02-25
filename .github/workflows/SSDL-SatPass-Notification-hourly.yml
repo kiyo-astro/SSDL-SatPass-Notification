@@ -1,9 +1,9 @@
-name: SSDL SatPass Notification (Daily 07:00 JST)
+name: SSDL SatPass Notification (Hourly)
 
 on:
   schedule:
     # GitHub Actions schedule is UTC. 07:00 JST = 22:00 UTC (previous day)
-    - cron: "0 22 * * *"
+    - cron: "50 * * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -38,8 +38,8 @@ jobs:
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
           METEOBLUE_API_KEY: ${{ secrets.METEOBLUE_API_KEY }}
           SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
-          TIME_WINDOW: ${{ secrets.TIME_WINDOW }}
-          SEND_NOTICE: ${{ secrets.SEND_NOTICE }}
+          TIME_WINDOW: evening
+          SEND_NOTICE: FALSE
           NOTIFY_TYPE: ${{ secrets.NOTIFY_TYPE }}
           TZ: Asia/Tokyo
         run: |
