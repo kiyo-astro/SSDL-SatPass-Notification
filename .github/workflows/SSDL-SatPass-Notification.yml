@@ -1,4 +1,4 @@
-name: SSDL SatPass Notification (Daily 07:00 JST) 
+name: SSDL SatPass Notification (Daily 07:00 JST)
 
 on:
   schedule:
