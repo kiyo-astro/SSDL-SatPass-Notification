@@ -439,7 +439,7 @@ def write_passes_to_ics(pass_table, out_path, calendar_name: str = "Satellite Pa
             f"Wind : {row["windspeed"]:.1f} m/s\n"
             f"----------------------------------------\n"
             f"Data Provided by Heavens-Above\n"
-            f"Created / updated at {Time.now().isot[0:19]}\n"
+            f"Created / updated at {Time.now().isot[0:19]} (UTC)\n"
             f"================================\n"
             f"SSDL SatPass Notification System\n"
             f"with SatPhotometry Library\n"
