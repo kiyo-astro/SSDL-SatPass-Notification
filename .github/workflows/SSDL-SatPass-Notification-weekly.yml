@@ -20,8 +20,8 @@ name: SSDL SatPass Notification (Weekly - Monday 07:00 JST)
 # Schedule                       #
 #--------------------------------#
 on:
-  schedule:
-    - cron: "0 22 * * 0"
+  # schedule:
+  #   - cron: "0 22 * * 0"
   workflow_dispatch: {}
 
 #--------------------------------#
