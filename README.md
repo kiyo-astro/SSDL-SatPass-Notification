@@ -4,6 +4,8 @@ Data provided by [heavens-above](https://heavens-above.com), [Meteoblue](https:/
 
 ## Usage
 ### iCalendar Subscription
+<img alt="iCalendar example" src="https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/images/readme_images/example_iCalendar.png" width="50%">
+
 **usage** :<br>
 Subscribe [this URL](https://github.com/kiyo-astro/SSDL-SatPass-Notification/raw/refs/heads/main/output/heavens-above/SatPass.ics) at calendar App.<br>
 ```URL copy
