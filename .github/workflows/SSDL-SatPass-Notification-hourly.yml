@@ -14,7 +14,7 @@
 #--------------------------------#
 # Workflow name                  #
 #--------------------------------#
-name: SSDL SatPass Notification (Hourly and iCalendar ONLY - 50 minutes past every hour)
+name: SSDL SatPass Notification (Hourly and iCalendar ONLY - 0 min every hour)
 
 #--------------------------------#
 # Schedule                       #
