@@ -1,4 +1,0 @@
-numpy
-requests
-astropy
-astroplan
