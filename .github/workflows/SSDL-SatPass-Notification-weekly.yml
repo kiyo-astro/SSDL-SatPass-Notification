@@ -71,7 +71,7 @@ jobs:
           METEOBLUE_UPDATE: NOT
           NOTIFY_TYPE: bydate
           TIME_WINDOW: evening
-          MIN_ALT: 20
+          MIN_ALT: 25
           MIN_DURATION: 30
           TZ: Asia/Tokyo
         run: |
