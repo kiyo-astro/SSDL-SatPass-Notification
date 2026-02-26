@@ -645,9 +645,10 @@ if notify_type == "bydate":
 lines = []
 lines.append(f"📅 <https://github.com/kiyo-astro/SSDL-SatPass-Notification/raw/refs/heads/main/output/heavens-above/SatPass.ics|*カレンダーをダウンロード*>")
 lines.append(f"URLを照会カレンダーとして Appleカレンダー または Googleカレンダー に登録・表示できます．")
+lines.append(f"照会カレンダーの登録方法は<https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/README.md|こちら>")
 lines.append(f"")
 lines.append(f"Data Provided by <https://www.heavens-above.com|Heavens-Above> / <https://www.meteoblue.com/en/weather/week/{obs_gd_lat_deg:.3f}N/{obs_gd_lon_deg:.3f}E|Meteoblue> / <https://github.com/kiyo-astro/satphotometry/|SatPhotometry Library>")
-lines.append(f"This message is automatically sent by SSDL SatPass Notification System")
+lines.append(f"This message is automatically sent by <https://github.com/kiyo-astro/SSDL-SatPass-Notification|SSDL SatPass Notification System>")
 lines.append(f"Created at {Time.now().iso[0:19]} (UTC)")
 slack_contents.append(lines)
 
