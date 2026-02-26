@@ -504,15 +504,19 @@ print()
 print("Writing Slack messages...")
 
 #  -  Title and header
+slack_contents = []
 lines = []
 lines.append(f"*🛰️ 注目すべき人工天体の上空通過予測*")
 lines.append(f"直近10日間の注目すべき人工天体の上空通過予測をお知らせします．")
 lines.append(f"(Filter : alt > {min_alt} deg & duration > {min_duration} sec & time window = {time_window})")
 lines.append("")
 
+slack_contents.append(lines)
+
 #  -  "bysat"  : Satellite passes is displayed by satellite
 if notify_type == "bysat":
     for group in pass_table.groups:
+        lines = []
         satname = group[0]["satname"]
         norad_id = group[0]["satid"]
 
@@ -564,7 +568,7 @@ if notify_type == "bysat":
         else:
             lines.append("良い観測条件の上空通過はありません．")
         lines.append("")
-
+        slack_contents.append(lines)
 
 #  -  "bydate" : Satellite passes is displayed by date (recommended)
 if notify_type == "bydate":
@@ -577,6 +581,7 @@ if notify_type == "bydate":
 
     if len(good_pass_table) > 0:
         for group in good_pass_table.groups:
+            lines = []
             date = group[0]["date"]
             start_lst_obj = (Time(group[0]["start_utc"]) + TimeDelta(lst_h*u.hour + lst_m*u.minute))
             start_lst_weekday = WEEKDAY_JP[start_lst_obj.to_datetime().weekday()]
@@ -629,25 +634,31 @@ if notify_type == "bydate":
             lines.append("```" + "\n".join(table_lines) + "```")
 
             lines.append("")
+            slack_contents.append(lines)
     else:
+        lines = []
         lines.append("直近10日間に注目すべき人工天体の容易観測条件での上空通過はありません．")
         lines.append("")
+        slack_contents.append(lines)
 
 #  -  footer
+lines = []
 lines.append(f"📅 <https://github.com/kiyo-astro/SSDL-SatPass-Notification/raw/refs/heads/main/output/heavens-above/SatPass.ics|*カレンダーをダウンロード*>")
 lines.append(f"URLを照会カレンダーとして Appleカレンダー または Googleカレンダー に登録・表示できます．")
 lines.append(f"")
 lines.append(f"Data Provided by <https://www.heavens-above.com|Heavens-Above> / <https://www.meteoblue.com/en/weather/week/{obs_gd_lat_deg:.3f}N/{obs_gd_lon_deg:.3f}E|Meteoblue> / <https://github.com/kiyo-astro/satphotometry/|SatPhotometry Library>")
 lines.append(f"This message is automatically sent by SSDL SatPass Notification System")
 lines.append(f"Created at {Time.now().iso[0:19]} (UTC)")
+slack_contents.append(lines)
 
 #  -  Progress display
 print("Completed : Write Slack messages. Preview will be displayed below.")
 print()
 
 # [2] Preview message
-for f in lines:
-    print(f)
+for f in slack_contents:
+    for line in f:
+        print(line)
 
 # [3] Send message
 #  -  Progress display
@@ -656,12 +667,25 @@ print("Uploading messages and files to Slack...")
 
 #  -  Send message
 if send_notice:
-    content = "\n".join(lines)
+    # slack_contents is expected to be a list of "blocks",
+    # where each block is a list[str] (lines to be posted together).
+    # For backward compatibility, if it's a flat list[str], treat it as one block.
+    blocks = slack_contents
+    if blocks and isinstance(blocks[0], str):
+        blocks = [blocks]
 
-    # upload file path
+    def _format_block(block: list[str]) -> str:
+        # Keep original newlines as-is, but avoid accidental "None"
+        return "\n".join([("" if v is None else str(v)) for v in block])
+
+    def _format_batch(batch: list[list[str]]) -> str:
+        # Separate blocks with a blank line for readability
+        return "\n".join(_format_block(b) for b in batch)
+
+    # upload file path (attached only to the final post)
     file_path = f"{output_PATH}/SatPass.ics"
 
-    # comment
+    # comment title (for the uploaded file)
     title = os.path.basename(file_path)
 
     def slack_api_post(url: str, token: str, data=None, files=None, timeout=60):
@@ -678,42 +702,64 @@ if send_notice:
             raise RuntimeError(f"Slack API error: {payload}")
         return payload
 
-    # retrieve file id and url
-    file_size = os.path.getsize(file_path)
-    filename = os.path.basename(file_path)
+    # Post 3 blocks per message; attach the ICS file only to the last message.
+    batch_size = 3
+    batches = [blocks[i:i + batch_size] for i in range(0, len(blocks), batch_size)]
 
-    get_url_payload = slack_api_post(
-        "https://slack.com/api/files.getUploadURLExternal",
-        token=slack_api_token,
-        data={
-            "filename": filename,
-            "length": str(file_size),  # bytes
-        },
-    )
-    upload_url = get_url_payload["upload_url"]
-    file_id = get_url_payload["file_id"]
+    for i, batch in enumerate(batches):
+        text = _format_batch(batch)
 
-    # upload file
-    with open(file_path, "rb") as f:
-        upload_resp = requests.post(
-            upload_url,
-            headers={"Content-Type": "application/octet-stream"},
-            data=f,
-            timeout=300,
-        )
-    upload_resp.raise_for_status()
+        if i < len(batches) - 1:
+            # Text-only message
+            slack_api_post(
+                "https://slack.com/api/chat.postMessage",
+                token=slack_api_token,
+                data={
+                    "channel": channel_id,
+                    "text": text+" -",
+                    "mrkdwn": "true",
+                },
+            )
+        else:
+            # Last message: upload and attach file with the message as initial_comment
+            content = text
 
-    # confirm file share
-    complete_payload = slack_api_post(
-        "https://slack.com/api/files.completeUploadExternal",
-        token=slack_api_token,
-        data={
-            "files": json.dumps([{"id": file_id, "title": title}]),
-            "channel_id": channel_id,
-            "initial_comment": content,
-        },
-    )
+            # retrieve file id and url
+            file_size = os.path.getsize(file_path)
+            filename = os.path.basename(file_path)
 
-    # Progress display
-    print("Uploaded OK")
-    print(json.dumps(complete_payload, indent=2, ensure_ascii=False))
+            get_url_payload = slack_api_post(
+                "https://slack.com/api/files.getUploadURLExternal",
+                token=slack_api_token,
+                data={
+                    "filename": filename,
+                    "length": str(file_size),  # bytes
+                },
+            )
+            upload_url = get_url_payload["upload_url"]
+            file_id = get_url_payload["file_id"]
+
+            # upload file
+            with open(file_path, "rb") as f:
+                upload_resp = requests.post(
+                    upload_url,
+                    headers={"Content-Type": "application/octet-stream"},
+                    data=f,
+                    timeout=300,
+                )
+            upload_resp.raise_for_status()
+
+            # confirm file share
+            complete_payload = slack_api_post(
+                "https://slack.com/api/files.completeUploadExternal",
+                token=slack_api_token,
+                data={
+                    "files": json.dumps([{"id": file_id, "title": title}]),
+                    "channel_id": channel_id,
+                    "initial_comment": content,
+                },
+            )
+
+            # Progress display
+            print("Uploaded OK")
+            print(json.dumps(complete_payload, indent=2, ensure_ascii=False))
