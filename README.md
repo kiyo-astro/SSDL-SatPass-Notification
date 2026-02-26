@@ -1,5 +1,5 @@
 # SSDL SatPass Notification
-Automated notification system that notifies bright artificial objects expected in 10 days and write iCalendar format(.ics) file for Kyushu University Hanada Lab Pegasus Observatory.<br>
+Automated notification system that notifies bright artificial objects expected in 10 days and writes iCalendar format(.ics) file for Kyushu University Hanada Lab Pegasus Observatory.<br>
 Data provided by [heavens-above](https://heavens-above.com), [Meteoblue](https://www.meteoblue.com) and [SatPhotometry Library](https://github.com/kiyo-astro/satphotometry).
 
 ## Usage
@@ -34,7 +34,7 @@ Slack Notification follows GitHub Actions workflow [SSDL-SatPass-Notification-we
 
 1. [cron-job](cron-job.org) sets running schedule of GitHub Actions workflow<br>
 1. [GitHub Actions](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/.github/workflows) runs [Python script](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/SSDL-SatPass-Notification.py)<br>
-1. [SSDL-SatPass-Notification.py](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/SSDL-SatPass-Notification.py) retrive data from [heavens-above](https://heavens-above.com) and [Meteoblue](https://www.meteoblue.com), make [iCalendar format file](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/output/heavens-above/SatPass.ics) and send notice to Slack via Slack API.
+1. [SSDL-SatPass-Notification.py](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/SSDL-SatPass-Notification.py) retrives data from [heavens-above](https://heavens-above.com) and [Meteoblue](https://www.meteoblue.com), makes [iCalendar format file](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/output/heavens-above/SatPass.ics) and sends notice to Slack via Slack API.
 
 ### Schedule settings
 Due to unacceptable delay of the GitHub Actions native scheduler (written in workflow files), running frequency and timing are now controlled by [cron-job](cron-job.org) via GitHub PAT.
@@ -42,7 +42,7 @@ Only the repository owner can change these settings. Therefore, in the future, t
 For further information about cron-job, please refer to [this useful article (in Japansese)](https://zenn.dev/ytkdm/articles/github-actions-cron-unreliable).
 
 ### Workflow file settings
-the repository contributers can change some settings about notice contents at [workflow files](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/.github/workflows).
+The repository contributers can change some settings about notice contents at [workflow files](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/.github/workflows).
 
 - Hourly iCalendar update : Edit [SSDL-SatPass-Notification-hourly.yml](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/.github/workflows/SSDL-SatPass-Notification-hourly.yml)
 - Weekly Slack notice : Edit [SSDL-SatPass-Notification-weekly.yml](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/.github/workflows/SSDL-SatPass-Notification-weekly.yml)
@@ -84,7 +84,7 @@ The option `DAY` is highly recommended because the number of free calls of Meteo
 `evening` | `morning` | `all` : Observation time window.
 - `evening` : ONLY visible satellite passes in evening are notified
 - `morning` : ONLY visible satellite passes in morning are notified
-- `all` : All visible satellite passes in evening are notified
+- `all` : All visible satellite passes are notified
 
 
 **MIN_ALT** :<br>
