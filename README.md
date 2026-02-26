@@ -6,6 +6,9 @@ Data provided by [heavens-above](https://heavens-above.com), [Meteoblue](https:/
 ### iCalendar Subscription
 **usage** :<br>
 Subscribe [this URL](https://github.com/kiyo-astro/SSDL-SatPass-Notification/raw/refs/heads/main/output/heavens-above/SatPass.ics) at calendar App.<br>
+```URL copy
+https://github.com/kiyo-astro/SSDL-SatPass-Notification/raw/refs/heads/main/output/heavens-above/SatPass.ics
+```
 Please set auto refresh frequency of your calendar subscription **LESS OFTEN than every 30 mins**.<br>
 <br>
 Also, you can manually download .ics file from [here](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/output/heavens-above/SatPass.ics).<br>
