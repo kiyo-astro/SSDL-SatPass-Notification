@@ -1,6 +1,6 @@
 # SSDL SatPass Notification
 Automated notification system that notify bright artificial objects expected in 10 days and write iCalendar format(.ics) file for Kyushu University Hanada Lab Pegasus Observatory.<br>
-Data provided by [heavens-above](https://heavens-above.com), [Meteoblue](https://www.meteoblue.com) and SatPhotometry Library.
+Data provided by [heavens-above](https://heavens-above.com), [Meteoblue](https://www.meteoblue.com) and [SatPhotometry Library](https://github.com/kiyo-astro/satphotometry).
 
 ## Usage
 ### iCalendar Subscription
