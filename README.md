@@ -36,15 +36,25 @@ Due to unacceptable delay of the GitHub Actions native scheduler (written in wor
 Only the repository owner can change these settings. Therefore, in the future, this repository should ideally be managed by an organization rather than an individual developer.<br>
 For further information about cron-job, please refer to [this useful article (in Japansese)](https://zenn.dev/ytkdm/articles/github-actions-cron-unreliable).
 
-### Notice contents settings
+### Workflow file settings
 the repository contributers can change some settings about notice contents at [workflow files](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/.github/workflows).
 
 - Hourly iCalendar update : Edit [SSDL-SatPass-Notification-hourly.yml](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/.github/workflows/SSDL-SatPass-Notification-hourly.yml)
 - Weekly Slack notice : Edit [SSDL-SatPass-Notification-weekly.yml](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/.github/workflows/SSDL-SatPass-Notification-weekly.yml)
 
-Contributers can change `SLACK_CHANNEL`,`SEND_NOTICE`,`METEOBLUE_UPDATE`,`NOTIFY_TYPE`,`TIME_WINDOW`,`MIN_ALT`,`MIN_DURATION` <br>
-ONLY owner can change `SLACK_TOKEN` and `METEOBLUE_API_KEY` from Repository Settings > Secrets and variables > Actions > Repository secrets<br>
-<br>
+Contributers can change :
+- `SLACK_CHANNEL`
+- `SEND_NOTICE`
+- `METEOBLUE_UPDATE`
+- `NOTIFY_TYPE`
+- `TIME_WINDOW`
+- `MIN_ALT`
+- `MIN_DURATION`
+
+ONLY owner can change from Repository Settings > Secrets and variables > Actions > Repository secrets :
+- `SLACK_TOKEN`
+- `METEOBLUE_API_KEY`
+
 **Caution : DO NOT HARDCODE ANY API KEYS** (`SLACK_TOKEN` and `METEOBLUE_API_KEY`) **on workflow files!** The workflow files are in public!
 
 ### Parameters
