@@ -66,7 +66,7 @@ jobs:
         env:
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
           METEOBLUE_API_KEY: ${{ secrets.METEOBLUE_API_KEY }}
-          SLACK_CHANNEL: C0AG1TD9GVD
+          SLACK_CHANNEL: C07KTC2TEK0
           SEND_NOTICE: SEND
           METEOBLUE_UPDATE: NOT
           NOTIFY_TYPE: bydate
