@@ -32,7 +32,7 @@ Slack Notification follows GitHub Actions workflow [SSDL-SatPass-Notification-we
 1. [SSDL-SatPass-Notification.py](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/SSDL-SatPass-Notification.py) retrive data from [heavens-above](https://heavens-above.com) and [Meteoblue](https://www.meteoblue.com), make [iCalendar format file](https://github.com/kiyo-astro/SSDL-SatPass-Notification/blob/main/output/heavens-above/SatPass.ics) and send notice to Slack via Slack API.
 
 ### Schedule settings
-Due to unacceptable delay of the GitHub Actions native scheduler (written in workflow files), running frequency and timing are now controlled by [cron-job](cron-job.org) via GitHub PAT.<br>
+Due to unacceptable delay of the GitHub Actions native scheduler (written in workflow files), running frequency and timing are now controlled by [cron-job](cron-job.org) via GitHub PAT.
 Only the repository owner can change these settings. Therefore, in the future, this repository should ideally be managed by an organization rather than an individual developer.<br>
 For further information about cron-job, please refer to [this useful article (in Japansese)](https://zenn.dev/ytkdm/articles/github-actions-cron-unreliable).
 
