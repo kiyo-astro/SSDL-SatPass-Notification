@@ -1,45 +1,55 @@
-# %% [markdown]
-# # SSDL SatPass Notification
-# Written by Kiyoaki Okudaira<br>
-# *Kyushu University Hanada Lab / University of Washington / IAU CPS SatHub<br>
-# (okudaira.kiyoaki.528@s.kyushu-u.ac.jp or kiyoaki@uw.edu)<br>
-# <br>
-# This app notifies bright artificial objects expected in 10 days. Data provided by heavens-above.com and SatPhotometry Library.<br>
-# <br>
-# **History**<br>
-# coding 2026-02-24 : 1st coding<br>
-# <br>
-# (c) 2026 Kiyoaki Okudaira - Kyushu University Hanada Lab (SSDL) / University of Washington / IAU CPS SatHub
+#--------------------------------------------------------------------------------------------------#
+# SSDL SatPass Notification                                                                        #
+# Developed by Kiyoaki Okudaira * Kyushu University                                                #
+#--------------------------------------------------------------------------------------------------#
+# Description                                                                                      #
+#--------------------------------------------------------------------------------------------------#
+# Notifies bright artificial objects expected in 10 days as Slack message and .ics calendar file.  #
+# Data provided by heavens-above.com, meteoblue and SatPhotometry Library                          #
+#--------------------------------------------------------------------------------------------------#
+# History                                                                                          #
+#--------------------------------------------------------------------------------------------------#
+# coding 2026.02.24: 1st coding                                                                    #
+# update 2026.02.25: GitHub actions supported                                                      #
+#--------------------------------------------------------------------------------------------------#
 
-# %% [markdown]
-# ### Parameters
-# **Target**<br>
-# In UTC
-
-# %%
-from input.satlist.BRIGHT_LEO import *
+#--------------------------------------------------------------------------------------------------#
+# Libraries                                                                                        #
+#--------------------------------------------------------------------------------------------------#
+# Default Library
 from pathlib import Path
-import os
-import sys
+import json, pickle, os, sys
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
+from time import sleep
 
-# %% [markdown]
-# **Heavens-Above settings**
+# Install requirements
+import numpy as np
+import requests
 
-# %%
-min_alt      = 30   # minimum altitude of objects [deg] | int or float
-min_duration = 60  # minimum duration of objects [sec] | int or float
-time_window  = os.getenv("TIME_WINDOW")    # morning, evening or all   | str or bool
+from astropy.table import Table, vstack
+from astropy.time import Time, TimeDelta
+import astropy.units as u
+from astroplan import Observer
 
-# %% [markdown]
-# **Slack API settings**
+# Custom library
+from satphotometry_light import heavens_above,gettle
 
+# Global constants
+WEEKDAY_JP = ["月", "火", "水", "木", "金", "土", "日"]
+HEAVENS_ABOVE_URL = "https://www.heavens-above.com/"
+METEOBLUE_URL = "https://my.meteoblue.com/packages"
+
+#--------------------------------------------------------------------------------------------------#
+# PATH                                                                                             #
+#--------------------------------------------------------------------------------------------------#
 BASE_DIR = Path(__file__).resolve().parent  # .../SSDL-SatPass-Notification
 REPO_DIR = BASE_DIR.parent                  # repo root (one level up)
 
 sys.path.insert(0, str(REPO_DIR))
 sys.path.insert(0, str(BASE_DIR))
 
-base_PATH = str(BASE_DIR) + "/"
+base_PATH   = str(BASE_DIR) + "/"
 output_PATH = str(BASE_DIR / "output" / "heavens-above")
 input_PATH  = str(BASE_DIR / "input" / "heavens-above")
 tmp_PATH    = str(BASE_DIR / "tmp" / "heavens-above")
@@ -48,52 +58,36 @@ os.makedirs(output_PATH, exist_ok=True)
 os.makedirs(input_PATH, exist_ok=True)
 os.makedirs(tmp_PATH, exist_ok=True)
 
-token = os.getenv("SLACK_TOKEN")
-if not token:
-    raise RuntimeError("SLACK_TOKEN is not set. Please set it as an env var or GitHub Actions secret.")
+#--------------------------------------------------------------------------------------------------#
+# Parameter                                                                                        #
+#--------------------------------------------------------------------------------------------------#
+# Satellite list
+from input.satlist.BRIGHT_LEO import *
 
-meteoblue_api_key = os.getenv("METEOBLUE_API_KEY")
-if not meteoblue_api_key:
-    raise RuntimeError("METEOBLUE_API_KEY is not set. Please set it as an env var or GitHub Actions secret.")
-
-channel_id = os.getenv("SLACK_CHANNEL")
-send_notice = os.getenv("SEND_NOTICE")
-if send_notice == "TRUE":
-    send_notice = True
-else:
-    send_notice = False
-
-notify_type = os.getenv("NOTIFY_TYPE")  # Notification type; "bydate" or "bysat" | str
-
-# %% [markdown]
-# **Standard libraries**
-
-# %%
-import numpy as np
-# from __future__ import annotations
-from datetime import datetime, timezone
-from zoneinfo import ZoneInfo
-from time import sleep
-import requests, json, pickle
-
-from astropy.table import Table
-from astropy.time import Time, TimeDelta
-import astropy.units as u
-from astroplan import Observer
-from astropy.table import vstack
-
-# %% [markdown]
-# **Satphotometry library**
-
-# %%
-from satphotometry_light import heavens_above,gettle
-
-# %% [markdown]
-# **Observatory setting**
-
-# %%
+# Observation site
 from input.obs_site.KUPT import *
 
+# Satellite pass filter settings
+min_alt      = int(os.getenv("MIN_ALT", 30))        # minimum altitude of objects [deg] | int or float
+min_duration = int(os.getenv("MIN_DURATION", 30))   # minimum duration of objects [sec] | int or float
+time_window  = os.getenv("TIME_WINDOW") # morning, evening or all | str or bool
+
+# Slack API settings
+send_notice     = True if os.getenv("SEND_NOTICE", "NOT") == "SEND" else False # Send message to Slack | bool
+slack_api_token = os.getenv("SLACK_TOKEN")   # Slack API token | str
+channel_id      = os.getenv("SLACK_CHANNEL") # Slack channel ID | str
+notify_type     = os.getenv("NOTIFY_TYPE", "bydate")   # Notification type; "bydate" or "bysat" | str
+
+# Meteoblue API settings
+meteoblue_api_key = os.getenv("METEOBLUE_API_KEY") # Meteoblue API key | str
+force_meteoblue   = True if os.getenv("METEOBLUE_UPDATE", "NOT") == "FORCE" else False # Send message to Slack | bool
+
+#--------------------------------------------------------------------------------------------------#
+# Main                                                                                             #
+#--------------------------------------------------------------------------------------------------#
+#--------------------------------#
+# Parse observation site         #
+#--------------------------------#
 obs_obj = Observer(
     longitude = obs_gd_lon_deg * u.deg,
     latitude = obs_gd_lat_deg * u.deg,
@@ -107,23 +101,17 @@ offset = now_local.utcoffset()
 lst_h = offset.total_seconds() // 3600
 lst_m = (offset.total_seconds() % 3600) // 60
 
-
-# %% [markdown]
-# **Global constants**
-
-# %%
-WEEKDAY_JP = ["月", "火", "水", "木", "金", "土", "日"]
-HEAVENS_ABOVE_URL = "https://www.heavens-above.com/"
-
-# %% [markdown]
-# ### Heavens-Above
-# **Get pass Summary**<br>
-# Get pass Summary from www.heavens-above.com/PassSummary.aspx
-
-# %%
+#--------------------------------#
+# Heavens-Above                  #
+#--------------------------------#
+# [1] Get pass Summary
+#  -  Retrieve pass Summary- from www.heavens-above.com/PassSummary.aspx
+#  -  Progress display
 print()
 print("Retrieving satellite passes from heavens above...")
-print()
+print(" - Note : This may take several seconds")
+
+#  -  Retrieve pass Summary
 pass_table = None
 for norad_id in norad_ids:
     _,tle_result = gettle.celes_trak.get_latest_TLE(norad_id)
@@ -134,22 +122,24 @@ for norad_id in norad_ids:
 
     query_result = heavens_above.get_pass_summary(norad_id,obs_gd_lon_deg,obs_gd_lat_deg,obs_gd_height,"UCT")
     sat_pass_table = heavens_above.parse_summary2table(query_result,satname)
+
     if pass_table is None:
         pass_table = sat_pass_table
     else:
         pass_table = vstack([pass_table, sat_pass_table])
-    sleep(0.25)
+    
+    sleep(0.25) # Session interval
 
+#  -  Progress display
 print("Completed : Retrieve satellite passes from heavens above")
 
-# %% [markdown]
-# **Timewindow**<br>
-# Morning / Evening observation
-
-# %%
+# [2] Time window
+#  -  Determine observation time window (evening/morning)
+#  -  Progress display
 print()
 print("Processing data from heavens above...")
-print()
+
+#  -  Add time window & date to pass_table
 time_windows = []
 dates = []
 for row in pass_table:
@@ -166,36 +156,22 @@ for row in pass_table:
 pass_table["date"] = dates
 pass_table["time_window"] = time_windows
 
+#  -  Progress display
 print("Completed : Process data from heavens above")
 
-# %% [markdown]
-# ### METEOBLUE
-
-# %%
-METEOBLUE_URL = "https://my.meteoblue.com/packages"
-
+#--------------------------------#
+# Meteoblue                      #
+#--------------------------------#
+# [1] Meteoblue API function
+#  -  Function to retrieve and parse 10 days weather forecast
 def fetch_meteoblue_10day_astropy(
     lat: float,
     lon: float,
     apikey: str | None = None,
     tz: str = "UTC",
     asl: float | None = None,
-    days: int = 10,
     timeout: int = 30,
 ) -> Table:
-    """
-    Fetch 10-day forecast from meteoblue and return as Astropy Table.
-    
-    Columns:
-        date (Time)
-        pictocode
-        t_min [degC]
-        t_mean [degC]
-        t_max [degC]
-        wind_speed_mean [m/s]
-        wind_dir [deg]
-        cloud_total_mean [%]
-    """
 
     apikey = apikey or os.environ.get("METEOBLUE_APIKEY")
     if not apikey:
@@ -228,15 +204,23 @@ def fetch_meteoblue_10day_astropy(
 
     return tbl
 
-# %%
+# [2] Get weather forecast
+#  -  Retrieve and parse 10 days weather forecast from Meteoblue
+#  -  Meteoblue forecast data PATH (./tmp/heavens-above/meteoblue/meteoblue_YYYY-MM-DD.csv)
 weather_path = f"{base_PATH}tmp/heavens-above/meteoblue/meteoblue_{Time.now().isot[0:10]}"
-if os.path.exists(f"{weather_path}.pkl"):
+
+#  -  Retrieve or read weather forecast
+#  -  For saving API calls : weather data will be retrieved once in 24 hours
+if os.path.exists(f"{weather_path}.pkl") and (force_meteoblue is not True):
     with open(f"{weather_path}.pkl", "rb") as f:
         weather_table = pickle.load(f)
+
 else:
+    #  -  Progress display
     print()
     print("Retrieving weather forecast from meteoblue...")
-    print()
+
+    #  -  Retrieve weather forecast
     weather_table = fetch_meteoblue_10day_astropy(
         lat=obs_gd_lat_deg,
         lon=obs_gd_lon_deg,
@@ -244,15 +228,22 @@ else:
         tz="UTC",
         asl=int(obs_gd_height*1000)
     )
+
+    #  -  Save history
     weather_table.write(f"{weather_path}.csv",overwrite=True)
     with open(f"{weather_path}.pkl", 'wb') as f:
         pickle.dump(weather_table, f)
     
+    #  -  Progress display
     print("Completed : Retrieve weather forecast from meteoblue")
-# %%
+
+# [3] Process weather forecast
+#  -  Parse 10 days weather forecast and intergrate to pass_table
+#  -  Progress display
 print()
 print("Processing data from meteoblue...")
-print()
+
+#  -  Set canvas
 totalcloudcover = []
 highclouds = []
 midclouds = []
@@ -261,6 +252,7 @@ temperature = []
 windspeed = []
 pictocode = []
 
+#  -  Write canvas
 for row in pass_table:
     idxs = np.where(weather_table["time"] == row["start_utc"][0:13]+":00:00")
     if len(idxs) > 0:
@@ -280,6 +272,8 @@ for row in pass_table:
         temperature.append("N/A")
         windspeed.append("N/A")
         pictocode.append("N/A")
+
+#  -  Integrate weather data to pass_table
 pass_table["totalcloudcover"] = totalcloudcover
 pass_table["highclouds"] = highclouds
 pass_table["midclouds"] = midclouds
@@ -288,7 +282,11 @@ pass_table["temperature"] = temperature
 pass_table["windspeed"] = windspeed
 pass_table["pictocode"] = pictocode
 
-# %%
+#  -  Progress display
+print("Completed : Process data from meteoblue")
+
+# [4] Import Meteoblue pictcodes
+#  -  See detail at https://docs.meteoblue.com/en/meteo/variables/pictograms
 pictocode_hourly = {
     1:  {"en": "Clear, cloudless sky",                                   "ja": "快晴（雲なし）",                         "emoji": "☀️"},
     2:  {"en": "Clear, few cirrus",                                      "ja": "晴れ（薄い巻雲少し）",                  "emoji": "☀️"},
@@ -328,21 +326,18 @@ pictocode_hourly = {
     34: {"en": "Overcast with light snow",                               "ja": "本曇り（弱い雪）",                      "emoji": "🌨️"},
     35: {"en": "Overcast with mixture of snow and rain",                 "ja": "本曇り（みぞれ/雨雪混在）",             "emoji": "🌧️❄️"},
 }
-print("Completed : Process data from meteoblue")
 
-# %% [markdown]
-# ### Save CSV
-
-# %%
+#--------------------------------#
+# Save pass_table                #
+#--------------------------------#
 pass_table.write(f"{output_PATH}/SatPass.csv",overwrite=True)
 
-# %% [markdown]
-# ### iCalendar
-
-# %%
-print()
-print("Writing ics file...")
-print()
+#--------------------------------#
+# iCalendar                      #
+#--------------------------------#
+# [1] iCalendar related functions
+#  -  Function to make iCalendar format file (.ics)
+#  -  String conversion functions
 def _ics_dt(dt: datetime) -> str:
     return dt.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
 
@@ -372,7 +367,7 @@ def _fold_ics_line(line: str, limit: int = 75) -> str:
     out.append(line)
     return "\r\n".join(out)
 
-
+#  -  function to make ics from pass_table 
 def write_passes_to_ics(pass_table, out_path, calendar_name: str = "Satellite Passes") -> str:
     out_path
     now_utc = datetime.now(timezone.utc)
@@ -437,12 +432,13 @@ def write_passes_to_ics(pass_table, out_path, calendar_name: str = "Satellite Pa
             f"Clouds : {row["totalcloudcover"]}% (L:{row["lowclouds"]} M:{row["midclouds"]} H:{row["highclouds"]})\n"
             f"Temperature : {row["temperature"]:.0f} °C\n"
             f"Wind : {row["windspeed"]:.1f} m/s\n"
+            f"Note : Weather data is updated every 24 hours\n"
             f"----------------------------------------\n"
-            f"Data Provided by Heavens-Above\n"
-            f"Created / updated at {Time.now().isot[0:19]} (UTC)\n"
+            f"Data Provided by Heavens-Above / Meteoblue\n"
+            f"Updated at {Time.now().isot[0:19]} (UTC)\n"
             f"================================\n"
             f"SSDL SatPass Notification System\n"
-            f"with SatPhotometry Library\n"
+            f" - with SatPhotometry Library\n"
             f"(c) 2026 Kiyoaki Okudaira - Kyushu University\n"
             f"================================"
         )
@@ -475,40 +471,47 @@ def write_passes_to_ics(pass_table, out_path, calendar_name: str = "Satellite Pa
 
     return out_path
 
-# %%
+# [2] Write iCalendar file
+#  -  Progress display
+print()
+print("Writing ics file...")
+
+#  -  Pass filtering
 if time_window == "evening" or time_window == "morning":
     good_pass_table = pass_table[(pass_table["max_alt"] >= min_alt) & (pass_table["duration"] > min_duration) & (pass_table["visible"] == True) & (pass_table["time_window"] == time_window)]
 else:
     good_pass_table = pass_table[(pass_table["max_alt"] >= min_alt) & (pass_table["duration"] > min_duration) & (pass_table["visible"] == True)]
-
 good_pass_table = good_pass_table.group_by("satname")
+
+#  -  Write and save iCalendar file
 out_file = write_passes_to_ics(good_pass_table, out_path=f"{output_PATH}/SatPass.ics")
 
+#  -  Progress display
 print("Completed : Write ics file")
 
-# %% [markdown]
-# **Upload to Server**
+# [3] Upload iCalendar file to server (deprecated)
+# !scp f"{output_PATH}/SatPass.ics [serveradress]:[filepath]
 
-# %%
-# !scp /Users/kiyoaki/VScode/satphotometry_package/output/heavens-above/SatPass.ics samc@m39.coreserver.jp:/virtual/samc/public_html/www.kiyoaki.jp/wp-content/uploads/SatPass-KUPT-bright.ics
-
-# %% [markdown]
-# ### Slack Notification
-# **Construct contents**<br>
-# By satellites
-
+#--------------------------------#
+# Slack                          #
+#--------------------------------#
+# [1] Construct message
+#  -  2 types of message format is available (notify_type)
+#       "bysat"  : Satellite passes is displayed by satellite
+#       "bydate" : Satellite passes is displayed by date (recommended)
+#  -  Progress display
 print()
 print("Writing Slack messages...")
-print()
 
-# %%
+#  -  Title and header
+lines = []
+lines.append(f"*🛰️ 注目すべき人工天体の上空通過予測*")
+lines.append(f"直近10日間の注目すべき人工天体の上空通過予測をお知らせします．")
+lines.append(f"(Filter : alt > {min_alt} deg & duration > {min_duration} sec & time window = {time_window})")
+lines.append("")
+
+#  -  "bysat"  : Satellite passes is displayed by satellite
 if notify_type == "bysat":
-    lines = []
-    lines.append(f"*🛰️ 注目すべき人工天体の上空通過予測 (試験送信)*")
-    lines.append(f"直近10日間の注目すべき人工天体の上空通過予測をお知らせします．")
-    lines.append(f"(Filter : alt > {min_alt} deg & duration > {min_duration} sec & time window = {time_window})")
-    lines.append("")
-    
     for group in pass_table.groups:
         satname = group[0]["satname"]
         norad_id = group[0]["satid"]
@@ -562,16 +565,8 @@ if notify_type == "bysat":
             lines.append("良い観測条件の上空通過はありません．")
         lines.append("")
 
-    lines.append(f"📅 <https://github.com/kiyo-astro/SSDL-SatPass-Notification/raw/refs/heads/main/output/heavens-above/SatPass.ics|*カレンダーをダウンロード*>")
-    lines.append(f"URLを照会カレンダーとして Appleカレンダー または Googleカレンダー に登録・表示できます．")
-    lines.append(f"Data Provided by <https://www.heavens-above.com|Heavens-Above> / <https://www.meteoblue.com/en/weather/week/33.599N130.212E|Meteoblue> / <https://github.com/kiyo-astro/satphotometry_package/|SatPhotometry Library>")
-    lines.append(f"This message is automatically sent by SSDL SatPass Notification System")
-    lines.append(f"Created at {Time.now().iso[0:19]} (UTC)")
 
-# %% [markdown]
-# By date
-
-# %%
+#  -  "bydate" : Satellite passes is displayed by date (recommended)
 if notify_type == "bydate":
     if time_window == "evening" or time_window == "morning":
         good_pass_table = pass_table[(pass_table["max_alt"] >= min_alt) & (pass_table["duration"] > min_duration) & (pass_table["visible"] == True) & (pass_table["time_window"] == time_window)]
@@ -579,12 +574,6 @@ if notify_type == "bydate":
         good_pass_table = pass_table[(pass_table["max_alt"] >= min_alt) & (pass_table["duration"] > min_duration) & (pass_table["visible"] == True)]
     good_pass_table.sort("start_utc")
     good_pass_table = good_pass_table.group_by("date")
-
-    lines = []
-    lines.append(f"*🛰️ 注目すべき人工天体の上空通過予測 (試験送信)*")
-    lines.append(f"直近10日間の注目すべき人工天体の上空通過予測をお知らせします．")
-    lines.append(f"(Filter : alt > {min_alt} deg & duration > {min_duration} sec & time window = {time_window})")
-    lines.append("")
 
     if len(good_pass_table) > 0:
         for group in good_pass_table.groups:
@@ -643,31 +632,29 @@ if notify_type == "bydate":
     else:
         lines.append("直近10日間に注目すべき人工天体の容易観測条件での上空通過はありません．")
         lines.append("")
-    lines.append(f"📅 <https://github.com/kiyo-astro/SSDL-SatPass-Notification/raw/refs/heads/main/output/heavens-above/SatPass.ics|*カレンダーをダウンロード*>")
-    lines.append(f"URLを照会カレンダーとして Appleカレンダー または Googleカレンダー に登録・表示できます．")
-    lines.append(f"")
-    lines.append(f"Data Provided by <https://www.heavens-above.com|Heavens-Above> / <https://www.meteoblue.com/en/weather/week/33.599N130.212E|Meteoblue> / <https://github.com/kiyo-astro/satphotometry_package/|SatPhotometry Library>")
-    lines.append(f"This message is automatically sent by SSDL SatPass Notification System")
-    lines.append(f"Created at {Time.now().iso[0:19]} (UTC)")
 
+#  -  footer
+lines.append(f"📅 <https://github.com/kiyo-astro/SSDL-SatPass-Notification/raw/refs/heads/main/output/heavens-above/SatPass.ics|*カレンダーをダウンロード*>")
+lines.append(f"URLを照会カレンダーとして Appleカレンダー または Googleカレンダー に登録・表示できます．")
+lines.append(f"")
+lines.append(f"Data Provided by <https://www.heavens-above.com|Heavens-Above> / <https://www.meteoblue.com/en/weather/week/{obs_gd_lat_deg:.3f}N/{obs_gd_lon_deg:.3f}E|Meteoblue> / <https://github.com/kiyo-astro/satphotometry/|SatPhotometry Library>")
+lines.append(f"This message is automatically sent by SSDL SatPass Notification System")
+lines.append(f"Created at {Time.now().iso[0:19]} (UTC)")
+
+#  -  Progress display
 print("Completed : Write Slack messages. Preview will be displayed below.")
 print()
 
-# %% [markdown]
-# **Preview**
-
-# %%
+# [2] Preview message
 for f in lines:
     print(f)
 
+# [3] Send message
+#  -  Progress display
 print()
 print("Uploading messages and files to Slack...")
-print()
 
-# %% [markdown]
-# **Send notification**
-
-# %%
+#  -  Send message
 if send_notice:
     content = "\n".join(lines)
 
@@ -697,7 +684,7 @@ if send_notice:
 
     get_url_payload = slack_api_post(
         "https://slack.com/api/files.getUploadURLExternal",
-        token=token,
+        token=slack_api_token,
         data={
             "filename": filename,
             "length": str(file_size),  # bytes
@@ -719,7 +706,7 @@ if send_notice:
     # confirm file share
     complete_payload = slack_api_post(
         "https://slack.com/api/files.completeUploadExternal",
-        token=token,
+        token=slack_api_token,
         data={
             "files": json.dumps([{"id": file_id, "title": title}]),
             "channel_id": channel_id,
@@ -727,7 +714,6 @@ if send_notice:
         },
     )
 
+    # Progress display
     print("Uploaded OK")
     print(json.dumps(complete_payload, indent=2, ensure_ascii=False))
-
-

@@ -1,18 +1,46 @@
-name: SSDL SatPass Notification (Hourly)
+#--------------------------------------------------------------------------------------------------#
+# SSDL SatPass Notification | GitHub Acions workflow file                                          #
+# Developed by Kiyoaki Okudaira * Kyushu University                                                #
+#--------------------------------------------------------------------------------------------------#
+# Description                                                                                      #
+#--------------------------------------------------------------------------------------------------#
+# GitHub Actions workflow file for SSDL-SatPass-Notification.py                                    #
+#--------------------------------------------------------------------------------------------------#
+# History                                                                                          #
+#--------------------------------------------------------------------------------------------------#
+# coding 2026.02.25: 1st coding                                                                    #
+#--------------------------------------------------------------------------------------------------#
 
+#--------------------------------#
+# Workflow name                  #
+#--------------------------------#
+name: SSDL SatPass Notification (Hourly and iCalendar ONLY - 50 minutes past every hour)
+
+#--------------------------------#
+# Schedule                       #
+#--------------------------------#
 on:
   schedule:
-    # GitHub Actions schedule is UTC. 07:00 JST = 22:00 UTC (previous day)
     - cron: "50 * * * *"
   workflow_dispatch: {}
 
+#--------------------------------#
+# Permissions                    #
+#--------------------------------#
+#  -  Permissions for contents should be "write" to update iCalendar file
 permissions:
   contents: write
 
+#--------------------------------#
+# Concurrency                    #
+#--------------------------------#
 concurrency:
   group: satpass-notification
   cancel-in-progress: false
 
+#--------------------------------#
+# Job                            #
+#--------------------------------#
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -34,13 +62,18 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run notification script
+        #  -  Set parameters below
         env:
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
           METEOBLUE_API_KEY: ${{ secrets.METEOBLUE_API_KEY }}
-          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+          SLACK_CHANNEL: C0AG1TD9GVD
+          SEND_NOTICE: NOT
+          METEOBLUE_UPDATE: NOT
+          NOTIFY_TYPE: bydate
           TIME_WINDOW: evening
-          SEND_NOTICE: FALSE
-          NOTIFY_TYPE: ${{ secrets.NOTIFY_TYPE }}
+          MIN_ALT: 20
+          MIN_DURATION: 30
+          
           TZ: Asia/Tokyo
         run: |
           python SSDL-SatPass-Notification.py
@@ -61,5 +94,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Update outputs ($(date '+%Y-%m-%d %H:%M %Z'))"
+          git commit -m "Update contents ($(date '+%Y-%m-%d %H:%M %Z'))"
           git push
