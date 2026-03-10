@@ -386,7 +386,9 @@ def write_passes_to_ics(pass_table, out_path, calendar_name: str = "Satellite Pa
         satid = row["satid"]
         satname = row["satname"]
 
-        event_url = f"{HEAVENS_ABOVE_URL}{row["detail_url"]}"
+        # event_url = f"{HEAVENS_ABOVE_URL}{row["detail_url"]}"
+
+        event_url = f"https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon={obs_gd_lon_deg:.4f}&latitude={obs_gd_lat_deg:.4f}&altitude={int(obs_gd_height*1000)}&waveLength=5e-5&aperture=0.508&norad={satid}&startUTC={row["start_utc"][0:19]}&endUTC={row["end_utc"][0:19]}&step=1&lstHour={int(lst_h)}&lstMin={int(lst_m)}&run=True"
 
         start_lst_obj = (Time(row["start_utc"]) + TimeDelta(lst_h*u.hour + lst_m*u.minute))
         start_lst_time = start_lst_obj.isot[11:19]
