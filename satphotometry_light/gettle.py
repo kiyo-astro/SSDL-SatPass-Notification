@@ -10,6 +10,7 @@
 #--------------------------------------------------------------------------------------------------#
 # copied 2025.12.07: from astroKUBO_lib                                                            #
 # update 2026.01.27: get_past_TLE function added                                                   #
+# bugfix 2026.05.10: support celestrak.org orbital elements format changes                         #
 #--------------------------------------------------------------------------------------------------#
 
 #--------------------------------------------------------------------------------------------------#
@@ -253,7 +254,7 @@ class celes_trak:
 
         # Get TLE data
         query_url = (
-            "https://celestrak.org/NORAD/elements/gp.php?CATNR={0}".format(norad_id)
+            "https://celestrak.org/NORAD/elements/gp.php?CATNR={0}&FORMAT=TLE".format(norad_id)
         )
 
         response = session.get(query_url, stream=True)
