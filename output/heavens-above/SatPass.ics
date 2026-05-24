@@ -5,37 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Satellite Passes
 BEGIN:VEVENT
-UID:59588.61187.6@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260528T000244
-DTEND;TZID=Asia/Tokyo:20260528T000556
-SUMMARY:☁️ ACS3
-LOCATION:Kyushu University Pegasus Telescope
-GEO:33.598889;130.211667
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
- ersity Pegasus Telescope:geo:33.598889,130.211667
-URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
- 17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=59588
- &startUTC=2026-05-27T15:02:44&endUTC=2026-05-27T15:05:56&step=1&lstHour=9&
- lstMin=0&run=True
-DESCRIPTION:================================\nACS3 | NORAD ID 59588\n======
- ==========================\nMag : 3.3\nDuration : 3 min 12 sec\nPass start
-  : 00:02:44 (el=10.0° / NE)\nHighest : 00:05:56 (el=25.0° / ENE)\nPass end
-  : 00:05:56 (el=25.0° / ENE)\n----------------------------------------\nSu
- nset : 19:16\nAstronomical dusk : 21:00\nAstronomical dawn : 03:31\nSunris
- e : 05:15\n----------------------------------------\n☁️ Overcast\nClouds :
-  100% (L:100 M:98 H:0)\nTemperature : 22 °C\nWind : 1.7 m/s\nNote : Weathe
- r data is updated every 24 hours\n----------------------------------------
- \nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-05-24T08:01:
- 35 (UTC)\n================================\nSSDL SatPass Notification Syst
- em\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - Kyushu Univ
- ersity\n================================
-END:VEVENT
-BEGIN:VEVENT
 UID:59588.61188.6@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260529T001050
-DTEND;TZID=Asia/Tokyo:20260529T001426
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260529T001013
+DTEND;TZID=Asia/Tokyo:20260529T001345
 SUMMARY:⛅ ACS3
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -43,24 +16,24 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=59588
- &startUTC=2026-05-28T15:10:50&endUTC=2026-05-28T15:14:26&step=1&lstHour=9&
+ &startUTC=2026-05-28T15:10:13&endUTC=2026-05-28T15:13:45&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nACS3 | NORAD ID 59588\n======
- ==========================\nMag : 3.1\nDuration : 3 min 36 sec\nPass start
-  : 00:10:50 (el=10.0° / NNE)\nHighest : 00:14:26 (el=30.0° / ENE)\nPass en
- d : 00:14:26 (el=30.0° / ENE)\n----------------------------------------\nS
+ ==========================\nMag : 3.1\nDuration : 3 min 32 sec\nPass start
+  : 00:10:13 (el=10.0° / NNE)\nHighest : 00:13:45 (el=29.0° / ENE)\nPass en
+ d : 00:13:45 (el=29.0° / ENE)\n----------------------------------------\nS
  unset : 19:17\nAstronomical dusk : 21:01\nAstronomical dawn : 03:30\nSunri
  se : 05:15\n----------------------------------------\n⛅ Partly cloudy\nClo
  uds : 67% (L:67 M:24 H:0)\nTemperature : 19 °C\nWind : 2.5 m/s\nNote : Wea
  ther data is updated every 24 hours\n-------------------------------------
- ---\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-05-24T08:
- 01:35 (UTC)\n================================\nSSDL SatPass Notification S
+ ---\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-05-24T09:
+ 01:28 (UTC)\n================================\nSSDL SatPass Notification S
  ystem\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - Kyushu U
  niversity\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:53807.61184.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260524T201511
 DTEND;TZID=Asia/Tokyo:20260524T202158
 SUMMARY:⛅ BLUEWALKER-3
@@ -81,15 +54,15 @@ DESCRIPTION:================================\nBLUEWALKER-3 | NORAD ID 53807
  dy and cirrus\nClouds : 68% (L:68 M:53 H:100)\nTemperature : 22 °C\nWind :
   1.0 m/s\nNote : Weather data is updated every 24 hours\n-----------------
  -----------------------\nData Provided by Heavens-Above / Meteoblue\nUpdat
- ed at 2026-05-24T08:01:35 (UTC)\n================================\nSSDL Sa
+ ed at 2026-05-24T09:01:28 (UTC)\n================================\nSSDL Sa
  tPass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki
   Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:48274.61187.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260527T211830
-DTEND;TZID=Asia/Tokyo:20260527T212147
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260527T211832
+DTEND;TZID=Asia/Tokyo:20260527T212149
 SUMMARY:☁️ CSS (TIANHE)
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -97,26 +70,26 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=48274
- &startUTC=2026-05-27T12:18:30&endUTC=2026-05-27T12:21:47&step=1&lstHour=9&
+ &startUTC=2026-05-27T12:18:32&endUTC=2026-05-27T12:21:49&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nCSS (TIANHE) | NORAD ID 48274
  \n================================\nMag : -0.6\nDuration : 3 min 16 sec\nP
- ass start : 21:18:30 (el=10.0° / NW)\nHighest : 21:21:24 (el=29.0° / NNE)\
- nPass end : 21:21:47 (el=29.0° / NNE)\n-----------------------------------
+ ass start : 21:18:32 (el=10.0° / NW)\nHighest : 21:21:26 (el=29.0° / NNE)\
+ nPass end : 21:21:49 (el=29.0° / NNE)\n-----------------------------------
  -----\nSunset : 19:16\nAstronomical dusk : 21:00\nAstronomical dawn : 03:3
  1\nSunrise : 05:15\n----------------------------------------\n☁️ Overcast\
  nClouds : 100% (L:100 M:53 H:0)\nTemperature : 22 °C\nWind : 2.1 m/s\nNote
   : Weather data is updated every 24 hours\n-------------------------------
  ---------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-05-
- 24T08:01:35 (UTC)\n================================\nSSDL SatPass Notifica
+ 24T09:01:28 (UTC)\n================================\nSSDL SatPass Notifica
  tion System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - Ky
  ushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:48274.61189.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260529T205804
-DTEND;TZID=Asia/Tokyo:20260529T210200
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260529T205808
+DTEND;TZID=Asia/Tokyo:20260529T210204
 SUMMARY:☀️ CSS (TIANHE)
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -124,26 +97,26 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=48274
- &startUTC=2026-05-29T11:58:04&endUTC=2026-05-29T12:02:00&step=1&lstHour=9&
+ &startUTC=2026-05-29T11:58:08&endUTC=2026-05-29T12:02:04&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nCSS (TIANHE) | NORAD ID 48274
  \n================================\nMag : -1.3\nDuration : 3 min 56 sec\nP
- ass start : 20:58:04 (el=10.0° / NW)\nHighest : 21:01:12 (el=45.0° / NNE)\
- nPass end : 21:02:00 (el=36.0° / ENE)\n-----------------------------------
+ ass start : 20:58:08 (el=10.0° / NW)\nHighest : 21:01:16 (el=46.0° / NNE)\
+ nPass end : 21:02:04 (el=36.0° / ENE)\n-----------------------------------
  -----\nSunset : 19:17\nAstronomical dusk : 21:02\nAstronomical dawn : 03:3
  0\nSunrise : 05:15\n----------------------------------------\n☀️ Clear\, c
  loudless sky\nClouds : 6% (L:6 M:0 H:0)\nTemperature : 21 °C\nWind : 1.7 m
  /s\nNote : Weather data is updated every 24 hours\n-----------------------
  -----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 
- 2026-05-24T08:01:35 (UTC)\n================================\nSSDL SatPass 
+ 2026-05-24T09:01:29 (UTC)\n================================\nSSDL SatPass 
  Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okuda
  ira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:48274.61190.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260530T195932
-DTEND;TZID=Asia/Tokyo:20260530T200522
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260530T195937
+DTEND;TZID=Asia/Tokyo:20260530T200528
 SUMMARY:☀️ CSS (TIANHE)
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -151,26 +124,26 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=48274
- &startUTC=2026-05-30T10:59:32&endUTC=2026-05-30T11:05:22&step=1&lstHour=9&
+ &startUTC=2026-05-30T10:59:37&endUTC=2026-05-30T11:05:28&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nCSS (TIANHE) | NORAD ID 48274
  \n================================\nMag : -0.6\nDuration : 5 min 50 sec\nP
- ass start : 19:59:32 (el=10.0° / NW)\nHighest : 20:02:27 (el=31.0° / NNE)\
- nPass end : 20:05:22 (el=10.0° / E)\n-------------------------------------
+ ass start : 19:59:37 (el=10.0° / NW)\nHighest : 20:02:32 (el=31.0° / NNE)\
+ nPass end : 20:05:28 (el=10.0° / E)\n-------------------------------------
  ---\nSunset : 19:18\nAstronomical dusk : 21:03\nAstronomical dawn : 03:29\
  nSunrise : 05:14\n----------------------------------------\n☀️ Clear\, clo
  udless sky\nClouds : 0% (L:0 M:0 H:0)\nTemperature : 21 °C\nWind : 1.9 m/s
  \nNote : Weather data is updated every 24 hours\n-------------------------
  ---------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 20
- 26-05-24T08:01:35 (UTC)\n================================\nSSDL SatPass No
+ 26-05-24T09:01:29 (UTC)\n================================\nSSDL SatPass No
  tification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudair
  a - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:48274.61190.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260530T213620
-DTEND;TZID=Asia/Tokyo:20260530T213813
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260530T213625
+DTEND;TZID=Asia/Tokyo:20260530T213818
 SUMMARY:☀️ CSS (TIANHE)
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -178,26 +151,26 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=48274
- &startUTC=2026-05-30T12:36:20&endUTC=2026-05-30T12:38:13&step=1&lstHour=9&
+ &startUTC=2026-05-30T12:36:25&endUTC=2026-05-30T12:38:18&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nCSS (TIANHE) | NORAD ID 48274
  \n================================\nMag : -0.4\nDuration : 1 min 53 sec\nP
- ass start : 21:36:20 (el=10.0° / WNW)\nHighest : 21:38:13 (el=30.0° / W)\n
- Pass end : 21:38:13 (el=30.0° / W)\n--------------------------------------
+ ass start : 21:36:25 (el=10.0° / WNW)\nHighest : 21:38:18 (el=30.0° / W)\n
+ Pass end : 21:38:18 (el=30.0° / W)\n--------------------------------------
  --\nSunset : 19:18\nAstronomical dusk : 21:03\nAstronomical dawn : 03:29\n
  Sunrise : 05:14\n----------------------------------------\n☀️ Clear\, clou
  dless sky\nClouds : 0% (L:0 M:0 H:0)\nTemperature : 20 °C\nWind : 1.5 m/s\
  nNote : Weather data is updated every 24 hours\n--------------------------
  --------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 202
- 6-05-24T08:01:35 (UTC)\n================================\nSSDL SatPass Not
+ 6-05-24T09:01:29 (UTC)\n================================\nSSDL SatPass Not
  ification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira
   - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:48274.61191.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260531T203735
-DTEND;TZID=Asia/Tokyo:20260531T204211
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260531T203742
+DTEND;TZID=Asia/Tokyo:20260531T204217
 SUMMARY:☀️ CSS (TIANHE)
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -205,26 +178,26 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=48274
- &startUTC=2026-05-31T11:37:35&endUTC=2026-05-31T11:42:11&step=1&lstHour=9&
+ &startUTC=2026-05-31T11:37:42&endUTC=2026-05-31T11:42:17&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nCSS (TIANHE) | NORAD ID 48274
- \n================================\nMag : -2.2\nDuration : 4 min 36 sec\nP
- ass start : 20:37:35 (el=10.0° / WNW)\nHighest : 20:40:48 (el=85.0° / NNE)
- \nPass end : 20:42:11 (el=32.0° / ESE)\n----------------------------------
+ \n================================\nMag : -2.2\nDuration : 4 min 34 sec\nP
+ ass start : 20:37:42 (el=10.0° / WNW)\nHighest : 20:40:56 (el=85.0° / NNE)
+ \nPass end : 20:42:17 (el=32.0° / ESE)\n----------------------------------
  ------\nSunset : 19:18\nAstronomical dusk : 21:04\nAstronomical dawn : 03:
  29\nSunrise : 05:14\n----------------------------------------\n☀️ Clear\, 
  few cirrus\nClouds : 3% (L:0 M:0 H:10)\nTemperature : 23 °C\nWind : 0.4 m/
  s\nNote : Weather data is updated every 24 hours\n------------------------
  ----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2
- 026-05-24T08:01:35 (UTC)\n================================\nSSDL SatPass N
+ 026-05-24T09:01:29 (UTC)\n================================\nSSDL SatPass N
  otification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudai
  ra - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:48274.61193.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260602T201707
-DTEND;TZID=Asia/Tokyo:20260602T202225
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260602T201718
+DTEND;TZID=Asia/Tokyo:20260602T202235
 SUMMARY:☀️ CSS (TIANHE)
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -232,24 +205,24 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=48274
- &startUTC=2026-06-02T11:17:07&endUTC=2026-06-02T11:22:25&step=1&lstHour=9&
+ &startUTC=2026-06-02T11:17:18&endUTC=2026-06-02T11:22:35&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nCSS (TIANHE) | NORAD ID 48274
  \n================================\nMag : -1.5\nDuration : 5 min 17 sec\nP
- ass start : 20:17:07 (el=10.0° / WNW)\nHighest : 20:20:12 (el=45.0° / SSW)
- \nPass end : 20:22:25 (el=17.0° / SE)\n-----------------------------------
+ ass start : 20:17:18 (el=10.0° / WNW)\nHighest : 20:20:23 (el=45.0° / SSW)
+ \nPass end : 20:22:35 (el=17.0° / SE)\n-----------------------------------
  -----\nSunset : 19:20\nAstronomical dusk : 21:06\nAstronomical dawn : 03:2
  8\nSunrise : 05:14\n----------------------------------------\n☀️ Clear wit
  h cirrus\nClouds : 30% (L:0 M:0 H:100)\nTemperature : 23 °C\nWind : 0.6 m/
  s\nNote : Weather data is updated every 24 hours\n------------------------
  ----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2
- 026-05-24T08:01:36 (UTC)\n================================\nSSDL SatPass N
+ 026-05-24T09:01:29 (UTC)\n================================\nSSDL SatPass N
  otification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudai
  ra - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:25544.61185.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260525T211148
 DTEND;TZID=Asia/Tokyo:20260525T211500
 SUMMARY:⛅ ISS (ZARYA)
@@ -270,13 +243,13 @@ DESCRIPTION:================================\nISS (ZARYA) | NORAD ID 25544\
  dy\nClouds : 56% (L:51 M:56 H:0)\nTemperature : 24 °C\nWind : 1.1 m/s\nNot
  e : Weather data is updated every 24 hours\n------------------------------
  ----------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-05
- -24T08:01:36 (UTC)\n================================\nSSDL SatPass Notific
+ -24T09:01:29 (UTC)\n================================\nSSDL SatPass Notific
  ation System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - K
  yushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:25544.61186.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260526T202413
 DTEND;TZID=Asia/Tokyo:20260526T202906
 SUMMARY:🌦️ ISS (ZARYA)
@@ -297,13 +270,13 @@ DESCRIPTION:================================\nISS (ZARYA) | NORAD ID 25544\
  h light rain\nClouds : 99% (L:57 M:99 H:100)\nTemperature : 23 °C\nWind : 
  3.4 m/s\nNote : Weather data is updated every 24 hours\n------------------
  ----------------------\nData Provided by Heavens-Above / Meteoblue\nUpdate
- d at 2026-05-24T08:01:36 (UTC)\n================================\nSSDL Sat
+ d at 2026-05-24T09:01:29 (UTC)\n================================\nSSDL Sat
  Pass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki 
  Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:25544.61187.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260527T211308
 DTEND;TZID=Asia/Tokyo:20260527T211611
 SUMMARY:☁️ ISS (ZARYA)
@@ -324,13 +297,13 @@ DESCRIPTION:================================\nISS (ZARYA) | NORAD ID 25544\
  ouds : 100% (L:100 M:53 H:0)\nTemperature : 22 °C\nWind : 2.1 m/s\nNote : 
  Weather data is updated every 24 hours\n----------------------------------
  ------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-05-24T
- 08:01:36 (UTC)\n================================\nSSDL SatPass Notificatio
+ 09:01:29 (UTC)\n================================\nSSDL SatPass Notificatio
  n System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - Kyush
  u University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:25544.61188.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260528T202508
 DTEND;TZID=Asia/Tokyo:20260528T203023
 SUMMARY:⛅ ISS (ZARYA)
@@ -351,13 +324,13 @@ DESCRIPTION:================================\nISS (ZARYA) | NORAD ID 25544\
  \nClouds : 74% (L:74 M:27 H:0)\nTemperature : 20 °C\nWind : 2.7 m/s\nNote 
  : Weather data is updated every 24 hours\n--------------------------------
  --------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-05-2
- 4T08:01:36 (UTC)\n================================\nSSDL SatPass Notificat
+ 4T09:01:30 (UTC)\n================================\nSSDL SatPass Notificat
  ion System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - Kyu
  shu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61047.61186.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260526T215228
 DTEND;TZID=Asia/Tokyo:20260526T215455
 SUMMARY:🌦️ SPACEMOBILE-001
@@ -378,13 +351,13 @@ DESCRIPTION:================================\nSPACEMOBILE-001 | NORAD ID 61
  with light rain\nClouds : 100% (L:61 M:100 H:91)\nTemperature : 22 °C\nWin
  d : 3.3 m/s\nNote : Weather data is updated every 24 hours\n--------------
  --------------------------\nData Provided by Heavens-Above / Meteoblue\nUp
- dated at 2026-05-24T08:01:36 (UTC)\n================================\nSSDL
+ dated at 2026-05-24T09:01:30 (UTC)\n================================\nSSDL
   SatPass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyo
  aki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61047.61187.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260527T195349
 DTEND;TZID=Asia/Tokyo:20260527T200016
 SUMMARY:🌦️ SPACEMOBILE-001
@@ -405,13 +378,13 @@ DESCRIPTION:================================\nSPACEMOBILE-001 | NORAD ID 61
   with light rain\nClouds : 100% (L:100 M:36 H:0)\nTemperature : 23 °C\nWin
  d : 2.3 m/s\nNote : Weather data is updated every 24 hours\n--------------
  --------------------------\nData Provided by Heavens-Above / Meteoblue\nUp
- dated at 2026-05-24T08:01:36 (UTC)\n================================\nSSDL
+ dated at 2026-05-24T09:01:30 (UTC)\n================================\nSSDL
   SatPass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyo
  aki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61047.61187.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260527T213207
 DTEND;TZID=Asia/Tokyo:20260527T213523
 SUMMARY:☁️ SPACEMOBILE-001
@@ -432,13 +405,13 @@ DESCRIPTION:================================\nSPACEMOBILE-001 | NORAD ID 61
  ast\nClouds : 100% (L:100 M:53 H:0)\nTemperature : 22 °C\nWind : 2.1 m/s\n
  Note : Weather data is updated every 24 hours\n---------------------------
  -------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026
- -05-24T08:01:36 (UTC)\n================================\nSSDL SatPass Noti
+ -05-24T09:01:30 (UTC)\n================================\nSSDL SatPass Noti
  fication System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira 
  - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61047.61188.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260528T211145
 DTEND;TZID=Asia/Tokyo:20260528T211555
 SUMMARY:⛅ SPACEMOBILE-001
@@ -459,13 +432,13 @@ DESCRIPTION:================================\nSPACEMOBILE-001 | NORAD ID 61
  loudy\nClouds : 71% (L:71 M:19 H:0)\nTemperature : 20 °C\nWind : 2.6 m/s\n
  Note : Weather data is updated every 24 hours\n---------------------------
  -------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026
- -05-24T08:01:37 (UTC)\n================================\nSSDL SatPass Noti
+ -05-24T09:01:30 (UTC)\n================================\nSSDL SatPass Noti
  fication System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira 
  - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61047.61189.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260529T205124
 DTEND;TZID=Asia/Tokyo:20260529T205631
 SUMMARY:☀️ SPACEMOBILE-001
@@ -486,13 +459,13 @@ DESCRIPTION:================================\nSPACEMOBILE-001 | NORAD ID 61
  loudless sky\nClouds : 6% (L:6 M:0 H:0)\nTemperature : 21 °C\nWind : 1.7 m
  /s\nNote : Weather data is updated every 24 hours\n-----------------------
  -----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 
- 2026-05-24T08:01:37 (UTC)\n================================\nSSDL SatPass 
+ 2026-05-24T09:01:30 (UTC)\n================================\nSSDL SatPass 
  Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okuda
  ira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61047.61190.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260530T203103
 DTEND;TZID=Asia/Tokyo:20260530T203711
 SUMMARY:☀️ SPACEMOBILE-001
@@ -513,13 +486,13 @@ DESCRIPTION:================================\nSPACEMOBILE-001 | NORAD ID 61
  loudless sky\nClouds : 0% (L:0 M:0 H:0)\nTemperature : 21 °C\nWind : 1.6 m
  /s\nNote : Weather data is updated every 24 hours\n-----------------------
  -----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 
- 2026-05-24T08:01:37 (UTC)\n================================\nSSDL SatPass 
+ 2026-05-24T09:01:30 (UTC)\n================================\nSSDL SatPass 
  Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okuda
  ira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61047.61191.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260531T201041
 DTEND;TZID=Asia/Tokyo:20260531T201721
 SUMMARY:☀️ SPACEMOBILE-001
@@ -540,13 +513,13 @@ DESCRIPTION:================================\nSPACEMOBILE-001 | NORAD ID 61
  few cirrus\nClouds : 3% (L:0 M:0 H:10)\nTemperature : 23 °C\nWind : 0.4 m/
  s\nNote : Weather data is updated every 24 hours\n------------------------
  ----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2
- 026-05-24T08:01:37 (UTC)\n================================\nSSDL SatPass N
+ 026-05-24T09:01:30 (UTC)\n================================\nSSDL SatPass N
  otification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudai
  ra - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61047.61192.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260601T195020
 DTEND;TZID=Asia/Tokyo:20260601T195654
 SUMMARY:☀️ SPACEMOBILE-001
@@ -567,13 +540,13 @@ DESCRIPTION:================================\nSPACEMOBILE-001 | NORAD ID 61
  th cirrus\nClouds : 28% (L:0 M:0 H:94)\nTemperature : 25 °C\nWind : 0.5 m/
  s\nNote : Weather data is updated every 24 hours\n------------------------
  ----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2
- 026-05-24T08:01:37 (UTC)\n================================\nSSDL SatPass N
+ 026-05-24T09:01:31 (UTC)\n================================\nSSDL SatPass N
  otification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudai
  ra - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61048.61184.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260524T220828
 DTEND;TZID=Asia/Tokyo:20260524T221034
 SUMMARY:⛅ SPACEMOBILE-002
@@ -594,14 +567,14 @@ DESCRIPTION:================================\nSPACEMOBILE-002 | NORAD ID 61
  udy and cirrus\nClouds : 64% (L:64 M:41 H:100)\nTemperature : 22 °C\nWind 
  : 0.9 m/s\nNote : Weather data is updated every 24 hours\n----------------
  ------------------------\nData Provided by Heavens-Above / Meteoblue\nUpda
- ted at 2026-05-24T08:01:37 (UTC)\n================================\nSSDL S
+ ted at 2026-05-24T09:01:31 (UTC)\n================================\nSSDL S
  atPass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoak
  i Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61048.61185.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260525T214807
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260525T214806
 DTEND;TZID=Asia/Tokyo:20260525T215056
 SUMMARY:⛅ SPACEMOBILE-002
 LOCATION:Kyushu University Pegasus Telescope
@@ -610,24 +583,24 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=61048
- &startUTC=2026-05-25T12:48:07&endUTC=2026-05-25T12:50:56&step=1&lstHour=9&
+ &startUTC=2026-05-25T12:48:06&endUTC=2026-05-25T12:50:56&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nSPACEMOBILE-002 | NORAD ID 61
- 048\n================================\nMag : None\nDuration : 2 min 49 sec
- \nPass start : 21:48:07 (el=10.0° / NW)\nHighest : 21:50:56 (el=45.0° / WN
+ 048\n================================\nMag : None\nDuration : 2 min 50 sec
+ \nPass start : 21:48:06 (el=10.0° / NW)\nHighest : 21:50:56 (el=45.0° / WN
  W)\nPass end : 21:50:56 (el=45.0° / WNW)\n--------------------------------
  --------\nSunset : 19:15\nAstronomical dusk : 20:59\nAstronomical dawn : 0
  3:32\nSunrise : 05:16\n----------------------------------------\n⛅ Partly 
  cloudy\nClouds : 56% (L:51 M:56 H:0)\nTemperature : 24 °C\nWind : 1.1 m/s\
  nNote : Weather data is updated every 24 hours\n--------------------------
  --------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 202
- 6-05-24T08:01:37 (UTC)\n================================\nSSDL SatPass Not
+ 6-05-24T09:01:31 (UTC)\n================================\nSSDL SatPass Not
  ification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira
   - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61048.61186.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260526T212744
 DTEND;TZID=Asia/Tokyo:20260526T213121
 SUMMARY:🌦️ SPACEMOBILE-002
@@ -648,13 +621,13 @@ DESCRIPTION:================================\nSPACEMOBILE-002 | NORAD ID 61
  st with light rain\nClouds : 100% (L:61 M:100 H:91)\nTemperature : 22 °C\n
  Wind : 3.3 m/s\nNote : Weather data is updated every 24 hours\n-----------
  -----------------------------\nData Provided by Heavens-Above / Meteoblue\
- nUpdated at 2026-05-24T08:01:37 (UTC)\n================================\nS
+ nUpdated at 2026-05-24T09:01:31 (UTC)\n================================\nS
  SDL SatPass Notification System\n - with SatPhotometry Library\n(c) 2026 K
  iyoaki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61048.61187.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260527T210721
 DTEND;TZID=Asia/Tokyo:20260527T211149
 SUMMARY:☁️ SPACEMOBILE-002
@@ -675,15 +648,15 @@ DESCRIPTION:================================\nSPACEMOBILE-002 | NORAD ID 61
  nClouds : 100% (L:100 M:53 H:0)\nTemperature : 22 °C\nWind : 2.1 m/s\nNote
   : Weather data is updated every 24 hours\n-------------------------------
  ---------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-05-
- 24T08:01:38 (UTC)\n================================\nSSDL SatPass Notifica
+ 24T09:01:31 (UTC)\n================================\nSSDL SatPass Notifica
  tion System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - Ky
  ushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61048.61188.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260528T204659
-DTEND;TZID=Asia/Tokyo:20260528T205220
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260528T204658
+DTEND;TZID=Asia/Tokyo:20260528T205219
 SUMMARY:⛅ SPACEMOBILE-002
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -691,26 +664,26 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=61048
- &startUTC=2026-05-28T11:46:59&endUTC=2026-05-28T11:52:20&step=1&lstHour=9&
+ &startUTC=2026-05-28T11:46:58&endUTC=2026-05-28T11:52:19&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nSPACEMOBILE-002 | NORAD ID 61
- 048\n================================\nMag : None\nDuration : 5 min 20 sec
- \nPass start : 20:46:59 (el=10.0° / NW)\nHighest : 20:50:46 (el=60.0° / SW
- )\nPass end : 20:52:20 (el=32.0° / SSE)\n---------------------------------
+ 048\n================================\nMag : None\nDuration : 5 min 21 sec
+ \nPass start : 20:46:58 (el=10.0° / NW)\nHighest : 20:50:46 (el=60.0° / SW
+ )\nPass end : 20:52:19 (el=32.0° / SSE)\n---------------------------------
  -------\nSunset : 19:17\nAstronomical dusk : 21:01\nAstronomical dawn : 03
  :30\nSunrise : 05:15\n----------------------------------------\n⛅ Partly c
  loudy\nClouds : 74% (L:74 M:27 H:0)\nTemperature : 20 °C\nWind : 2.7 m/s\n
  Note : Weather data is updated every 24 hours\n---------------------------
  -------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026
- -05-24T08:01:38 (UTC)\n================================\nSSDL SatPass Noti
+ -05-24T09:01:31 (UTC)\n================================\nSSDL SatPass Noti
  fication System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira 
  - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61048.61189.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260529T202635
-DTEND;TZID=Asia/Tokyo:20260529T203255
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260529T202634
+DTEND;TZID=Asia/Tokyo:20260529T203254
 SUMMARY:☀️ SPACEMOBILE-002
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -718,26 +691,26 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=61048
- &startUTC=2026-05-29T11:26:35&endUTC=2026-05-29T11:32:55&step=1&lstHour=9&
+ &startUTC=2026-05-29T11:26:34&endUTC=2026-05-29T11:32:54&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nSPACEMOBILE-002 | NORAD ID 61
  048\n================================\nMag : None\nDuration : 6 min 20 sec
- \nPass start : 20:26:35 (el=10.0° / NW)\nHighest : 20:30:22 (el=57.0° / SW
- )\nPass end : 20:32:55 (el=19.0° / SSE)\n---------------------------------
+ \nPass start : 20:26:34 (el=10.0° / NW)\nHighest : 20:30:21 (el=57.0° / SW
+ )\nPass end : 20:32:54 (el=19.0° / SSE)\n---------------------------------
  -------\nSunset : 19:17\nAstronomical dusk : 21:02\nAstronomical dawn : 03
  :30\nSunrise : 05:15\n----------------------------------------\n☀️ Clear\,
   cloudless sky\nClouds : 6% (L:6 M:0 H:0)\nTemperature : 21 °C\nWind : 1.7
   m/s\nNote : Weather data is updated every 24 hours\n---------------------
  -------------------\nData Provided by Heavens-Above / Meteoblue\nUpdated a
- t 2026-05-24T08:01:38 (UTC)\n================================\nSSDL SatPas
+ t 2026-05-24T09:01:31 (UTC)\n================================\nSSDL SatPas
  s Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Oku
  daira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61048.61190.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260530T200610
-DTEND;TZID=Asia/Tokyo:20260530T201333
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260530T200609
+DTEND;TZID=Asia/Tokyo:20260530T201332
 SUMMARY:☀️ SPACEMOBILE-002
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -745,26 +718,26 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=61048
- &startUTC=2026-05-30T11:06:10&endUTC=2026-05-30T11:13:33&step=1&lstHour=9&
+ &startUTC=2026-05-30T11:06:09&endUTC=2026-05-30T11:13:32&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nSPACEMOBILE-002 | NORAD ID 61
  048\n================================\nMag : None\nDuration : 7 min 23 sec
- \nPass start : 20:06:10 (el=10.0° / NW)\nHighest : 20:09:56 (el=55.0° / SW
- )\nPass end : 20:13:33 (el=11.0° / SSE)\n---------------------------------
+ \nPass start : 20:06:09 (el=10.0° / NW)\nHighest : 20:09:54 (el=55.0° / SW
+ )\nPass end : 20:13:32 (el=11.0° / SSE)\n---------------------------------
  -------\nSunset : 19:18\nAstronomical dusk : 21:03\nAstronomical dawn : 03
  :29\nSunrise : 05:14\n----------------------------------------\n☀️ Clear\,
   cloudless sky\nClouds : 0% (L:0 M:0 H:0)\nTemperature : 21 °C\nWind : 1.6
   m/s\nNote : Weather data is updated every 24 hours\n---------------------
  -------------------\nData Provided by Heavens-Above / Meteoblue\nUpdated a
- t 2026-05-24T08:01:38 (UTC)\n================================\nSSDL SatPas
+ t 2026-05-24T09:01:31 (UTC)\n================================\nSSDL SatPas
  s Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Oku
  daira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61048.61191.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260531T194545
-DTEND;TZID=Asia/Tokyo:20260531T195315
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260531T194543
+DTEND;TZID=Asia/Tokyo:20260531T195313
 SUMMARY:☀️ SPACEMOBILE-002
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -772,24 +745,24 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=61048
- &startUTC=2026-05-31T10:45:45&endUTC=2026-05-31T10:53:15&step=1&lstHour=9&
+ &startUTC=2026-05-31T10:45:43&endUTC=2026-05-31T10:53:13&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nSPACEMOBILE-002 | NORAD ID 61
- 048\n================================\nMag : None\nDuration : 7 min 30 sec
- \nPass start : 19:45:45 (el=10.0° / NW)\nHighest : 19:49:30 (el=52.0° / SW
- )\nPass end : 19:53:15 (el=10.0° / SSE)\n---------------------------------
+ 048\n================================\nMag : None\nDuration : 7 min 29 sec
+ \nPass start : 19:45:43 (el=10.0° / NW)\nHighest : 19:49:28 (el=52.0° / SW
+ )\nPass end : 19:53:13 (el=10.0° / SSE)\n---------------------------------
  -------\nSunset : 19:18\nAstronomical dusk : 21:04\nAstronomical dawn : 03
  :29\nSunrise : 05:14\n----------------------------------------\n☀️ Clear\,
   few cirrus\nClouds : 3% (L:0 M:0 H:10)\nTemperature : 24 °C\nWind : 0.9 m
  /s\nNote : Weather data is updated every 24 hours\n-----------------------
  -----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 
- 2026-05-24T08:01:38 (UTC)\n================================\nSSDL SatPass 
+ 2026-05-24T09:01:32 (UTC)\n================================\nSSDL SatPass 
  Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okuda
  ira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61045.61184.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260524T212043
 DTEND;TZID=Asia/Tokyo:20260524T212429
 SUMMARY:⛅ SPACEMOBILE-003
@@ -810,13 +783,13 @@ DESCRIPTION:================================\nSPACEMOBILE-003 | NORAD ID 61
  loudy and cirrus\nClouds : 61% (L:61 M:46 H:100)\nTemperature : 22 °C\nWin
  d : 0.9 m/s\nNote : Weather data is updated every 24 hours\n--------------
  --------------------------\nData Provided by Heavens-Above / Meteoblue\nUp
- dated at 2026-05-24T08:01:38 (UTC)\n================================\nSSDL
+ dated at 2026-05-24T09:01:32 (UTC)\n================================\nSSDL
   SatPass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyo
  aki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61045.61185.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260525T210033
 DTEND;TZID=Asia/Tokyo:20260525T210504
 SUMMARY:⛅ SPACEMOBILE-003
@@ -837,13 +810,13 @@ DESCRIPTION:================================\nSPACEMOBILE-003 | NORAD ID 61
  cloudy\nClouds : 56% (L:51 M:56 H:0)\nTemperature : 24 °C\nWind : 1.1 m/s\
  nNote : Weather data is updated every 24 hours\n--------------------------
  --------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 202
- 6-05-24T08:01:38 (UTC)\n================================\nSSDL SatPass Not
+ 6-05-24T09:01:32 (UTC)\n================================\nSSDL SatPass Not
  ification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira
   - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61045.61186.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260526T204029
 DTEND;TZID=Asia/Tokyo:20260526T204547
 SUMMARY:🌦️ SPACEMOBILE-003
@@ -864,13 +837,13 @@ DESCRIPTION:================================\nSPACEMOBILE-003 | NORAD ID 61
   with light rain\nClouds : 99% (L:57 M:99 H:100)\nTemperature : 23 °C\nWin
  d : 3.4 m/s\nNote : Weather data is updated every 24 hours\n--------------
  --------------------------\nData Provided by Heavens-Above / Meteoblue\nUp
- dated at 2026-05-24T08:01:38 (UTC)\n================================\nSSDL
+ dated at 2026-05-24T09:01:32 (UTC)\n================================\nSSDL
   SatPass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyo
  aki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61045.61187.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260527T202030
 DTEND;TZID=Asia/Tokyo:20260527T202639
 SUMMARY:☁️ SPACEMOBILE-003
@@ -891,13 +864,13 @@ DESCRIPTION:================================\nSPACEMOBILE-003 | NORAD ID 61
  t\nClouds : 100% (L:100 M:43 H:0)\nTemperature : 22 °C\nWind : 2.2 m/s\nNo
  te : Weather data is updated every 24 hours\n-----------------------------
  -----------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-0
- 5-24T08:01:39 (UTC)\n================================\nSSDL SatPass Notifi
+ 5-24T09:01:32 (UTC)\n================================\nSSDL SatPass Notifi
  cation System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - 
  Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61045.61188.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260528T200036
 DTEND;TZID=Asia/Tokyo:20260528T200740
 SUMMARY:⛅ SPACEMOBILE-003
@@ -918,13 +891,13 @@ DESCRIPTION:================================\nSPACEMOBILE-003 | NORAD ID 61
  loudy\nClouds : 74% (L:74 M:27 H:0)\nTemperature : 20 °C\nWind : 2.7 m/s\n
  Note : Weather data is updated every 24 hours\n---------------------------
  -------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026
- -05-24T08:01:39 (UTC)\n================================\nSSDL SatPass Noti
+ -05-24T09:01:32 (UTC)\n================================\nSSDL SatPass Noti
  fication System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira 
  - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61049.61184.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260524T214314
 DTEND;TZID=Asia/Tokyo:20260524T214616
 SUMMARY:⛅ SPACEMOBILE-004
@@ -945,13 +918,13 @@ DESCRIPTION:================================\nSPACEMOBILE-004 | NORAD ID 61
  y and cirrus\nClouds : 61% (L:61 M:46 H:100)\nTemperature : 22 °C\nWind : 
  0.9 m/s\nNote : Weather data is updated every 24 hours\n------------------
  ----------------------\nData Provided by Heavens-Above / Meteoblue\nUpdate
- d at 2026-05-24T08:01:39 (UTC)\n================================\nSSDL Sat
+ d at 2026-05-24T09:01:32 (UTC)\n================================\nSSDL Sat
  Pass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki 
  Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61049.61185.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260525T212243
 DTEND;TZID=Asia/Tokyo:20260525T212629
 SUMMARY:⛅ SPACEMOBILE-004
@@ -972,13 +945,13 @@ DESCRIPTION:================================\nSPACEMOBILE-004 | NORAD ID 61
  oudy\nClouds : 56% (L:51 M:56 H:0)\nTemperature : 24 °C\nWind : 1.1 m/s\nN
  ote : Weather data is updated every 24 hours\n----------------------------
  ------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-
- 05-24T08:01:39 (UTC)\n================================\nSSDL SatPass Notif
+ 05-24T09:01:32 (UTC)\n================================\nSSDL SatPass Notif
  ication System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira -
   Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61049.61186.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260526T210210
 DTEND;TZID=Asia/Tokyo:20260526T210644
 SUMMARY:🌦️ SPACEMOBILE-004
@@ -999,13 +972,13 @@ DESCRIPTION:================================\nSPACEMOBILE-004 | NORAD ID 61
  t with light rain\nClouds : 100% (L:61 M:100 H:91)\nTemperature : 22 °C\nW
  ind : 3.3 m/s\nNote : Weather data is updated every 24 hours\n------------
  ----------------------------\nData Provided by Heavens-Above / Meteoblue\n
- Updated at 2026-05-24T08:01:39 (UTC)\n================================\nSS
+ Updated at 2026-05-24T09:01:33 (UTC)\n================================\nSS
  DL SatPass Notification System\n - with SatPhotometry Library\n(c) 2026 Ki
  yoaki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61049.61187.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260527T204135
 DTEND;TZID=Asia/Tokyo:20260527T204700
 SUMMARY:☁️ SPACEMOBILE-004
@@ -1026,13 +999,13 @@ DESCRIPTION:================================\nSPACEMOBILE-004 | NORAD ID 61
  t\nClouds : 100% (L:100 M:43 H:0)\nTemperature : 22 °C\nWind : 2.2 m/s\nNo
  te : Weather data is updated every 24 hours\n-----------------------------
  -----------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-0
- 5-24T08:01:39 (UTC)\n================================\nSSDL SatPass Notifi
+ 5-24T09:01:33 (UTC)\n================================\nSSDL SatPass Notifi
  cation System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - 
  Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61049.61188.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260528T202057
 DTEND;TZID=Asia/Tokyo:20260528T202719
 SUMMARY:⛅ SPACEMOBILE-004
@@ -1053,13 +1026,13 @@ DESCRIPTION:================================\nSPACEMOBILE-004 | NORAD ID 61
  oudy\nClouds : 74% (L:74 M:27 H:0)\nTemperature : 20 °C\nWind : 2.7 m/s\nN
  ote : Weather data is updated every 24 hours\n----------------------------
  ------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-
- 05-24T08:01:39 (UTC)\n================================\nSSDL SatPass Notif
+ 05-24T09:01:33 (UTC)\n================================\nSSDL SatPass Notif
  ication System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira -
   Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61049.61189.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260529T200019
 DTEND;TZID=Asia/Tokyo:20260529T200740
 SUMMARY:☀️ SPACEMOBILE-004
@@ -1080,13 +1053,13 @@ DESCRIPTION:================================\nSPACEMOBILE-004 | NORAD ID 61
  cloudless sky\nClouds : 6% (L:6 M:0 H:0)\nTemperature : 21 °C\nWind : 1.7 
  m/s\nNote : Weather data is updated every 24 hours\n----------------------
  ------------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at
-  2026-05-24T08:01:39 (UTC)\n================================\nSSDL SatPass
+  2026-05-24T09:01:33 (UTC)\n================================\nSSDL SatPass
   Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okud
  aira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61046.61186.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260526T215422
 DTEND;TZID=Asia/Tokyo:20260526T215643
 SUMMARY:🌦️ SPACEMOBILE-005
@@ -1107,13 +1080,13 @@ DESCRIPTION:================================\nSPACEMOBILE-005 | NORAD ID 61
  with light rain\nClouds : 100% (L:61 M:100 H:91)\nTemperature : 22 °C\nWin
  d : 3.3 m/s\nNote : Weather data is updated every 24 hours\n--------------
  --------------------------\nData Provided by Heavens-Above / Meteoblue\nUp
- dated at 2026-05-24T08:01:40 (UTC)\n================================\nSSDL
+ dated at 2026-05-24T09:01:33 (UTC)\n================================\nSSDL
   SatPass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyo
  aki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61046.61187.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260527T195537
 DTEND;TZID=Asia/Tokyo:20260527T200205
 SUMMARY:🌦️ SPACEMOBILE-005
@@ -1134,13 +1107,13 @@ DESCRIPTION:================================\nSPACEMOBILE-005 | NORAD ID 61
   with light rain\nClouds : 100% (L:100 M:36 H:0)\nTemperature : 23 °C\nWin
  d : 2.3 m/s\nNote : Weather data is updated every 24 hours\n--------------
  --------------------------\nData Provided by Heavens-Above / Meteoblue\nUp
- dated at 2026-05-24T08:01:40 (UTC)\n================================\nSSDL
+ dated at 2026-05-24T09:01:33 (UTC)\n================================\nSSDL
   SatPass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyo
  aki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61046.61187.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260527T213356
 DTEND;TZID=Asia/Tokyo:20260527T213707
 SUMMARY:☁️ SPACEMOBILE-005
@@ -1161,13 +1134,13 @@ DESCRIPTION:================================\nSPACEMOBILE-005 | NORAD ID 61
  ast\nClouds : 100% (L:100 M:53 H:0)\nTemperature : 22 °C\nWind : 2.1 m/s\n
  Note : Weather data is updated every 24 hours\n---------------------------
  -------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026
- -05-24T08:01:40 (UTC)\n================================\nSSDL SatPass Noti
+ -05-24T09:01:33 (UTC)\n================================\nSSDL SatPass Noti
  fication System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira 
  - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61046.61188.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260528T211328
 DTEND;TZID=Asia/Tokyo:20260528T211732
 SUMMARY:⛅ SPACEMOBILE-005
@@ -1188,13 +1161,13 @@ DESCRIPTION:================================\nSPACEMOBILE-005 | NORAD ID 61
  loudy\nClouds : 71% (L:71 M:19 H:0)\nTemperature : 20 °C\nWind : 2.6 m/s\n
  Note : Weather data is updated every 24 hours\n---------------------------
  -------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026
- -05-24T08:01:40 (UTC)\n================================\nSSDL SatPass Noti
+ -05-24T09:01:33 (UTC)\n================================\nSSDL SatPass Noti
  fication System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira 
  - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61046.61189.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260529T205258
 DTEND;TZID=Asia/Tokyo:20260529T205759
 SUMMARY:☀️ SPACEMOBILE-005
@@ -1215,13 +1188,13 @@ DESCRIPTION:================================\nSPACEMOBILE-005 | NORAD ID 61
  loudless sky\nClouds : 6% (L:6 M:0 H:0)\nTemperature : 21 °C\nWind : 1.7 m
  /s\nNote : Weather data is updated every 24 hours\n-----------------------
  -----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 
- 2026-05-24T08:01:40 (UTC)\n================================\nSSDL SatPass 
+ 2026-05-24T09:01:34 (UTC)\n================================\nSSDL SatPass 
  Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okuda
  ira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61046.61190.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260530T203226
 DTEND;TZID=Asia/Tokyo:20260530T203829
 SUMMARY:☀️ SPACEMOBILE-005
@@ -1242,13 +1215,13 @@ DESCRIPTION:================================\nSPACEMOBILE-005 | NORAD ID 61
  loudless sky\nClouds : 0% (L:0 M:0 H:0)\nTemperature : 21 °C\nWind : 1.6 m
  /s\nNote : Weather data is updated every 24 hours\n-----------------------
  -----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 
- 2026-05-24T08:01:40 (UTC)\n================================\nSSDL SatPass 
+ 2026-05-24T09:01:34 (UTC)\n================================\nSSDL SatPass 
  Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okuda
  ira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61046.61191.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260531T201152
 DTEND;TZID=Asia/Tokyo:20260531T201830
 SUMMARY:☀️ SPACEMOBILE-005
@@ -1269,13 +1242,13 @@ DESCRIPTION:================================\nSPACEMOBILE-005 | NORAD ID 61
  few cirrus\nClouds : 3% (L:0 M:0 H:10)\nTemperature : 23 °C\nWind : 0.4 m/
  s\nNote : Weather data is updated every 24 hours\n------------------------
  ----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2
- 026-05-24T08:01:40 (UTC)\n================================\nSSDL SatPass N
+ 026-05-24T09:01:34 (UTC)\n================================\nSSDL SatPass N
  otification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudai
  ra - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:61046.61192.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260601T195116
 DTEND;TZID=Asia/Tokyo:20260601T195750
 SUMMARY:☀️ SPACEMOBILE-005
@@ -1296,13 +1269,13 @@ DESCRIPTION:================================\nSPACEMOBILE-005 | NORAD ID 61
  th cirrus\nClouds : 28% (L:0 M:0 H:94)\nTemperature : 25 °C\nWind : 0.5 m/
  s\nNote : Weather data is updated every 24 hours\n------------------------
  ----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2
- 026-05-24T08:01:40 (UTC)\n================================\nSSDL SatPass N
+ 026-05-24T09:01:34 (UTC)\n================================\nSSDL SatPass N
  otification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudai
  ra - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:67232.61185.6@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260525T221755
 DTEND;TZID=Asia/Tokyo:20260525T222004
 SUMMARY:⛅ SPACEMOBILE-006
@@ -1323,13 +1296,13 @@ DESCRIPTION:================================\nSPACEMOBILE-006 | NORAD ID 67
  dy and few cirrus\nClouds : 64% (L:51 M:64 H:30)\nTemperature : 23 °C\nWin
  d : 1.0 m/s\nNote : Weather data is updated every 24 hours\n--------------
  --------------------------\nData Provided by Heavens-Above / Meteoblue\nUp
- dated at 2026-05-24T08:01:41 (UTC)\n================================\nSSDL
+ dated at 2026-05-24T09:01:34 (UTC)\n================================\nSSDL
   SatPass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyo
  aki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:67232.61186.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260526T215947
 DTEND;TZID=Asia/Tokyo:20260526T220229
 SUMMARY:🌦️ SPACEMOBILE-006
@@ -1350,14 +1323,14 @@ DESCRIPTION:================================\nSPACEMOBILE-006 | NORAD ID 67
  with light rain\nClouds : 100% (L:61 M:100 H:91)\nTemperature : 22 °C\nWin
  d : 3.3 m/s\nNote : Weather data is updated every 24 hours\n--------------
  --------------------------\nData Provided by Heavens-Above / Meteoblue\nUp
- dated at 2026-05-24T08:01:41 (UTC)\n================================\nSSDL
+ dated at 2026-05-24T09:01:34 (UTC)\n================================\nSSDL
   SatPass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyo
  aki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:67232.61187.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260527T214140
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260527T214139
 DTEND;TZID=Asia/Tokyo:20260527T214456
 SUMMARY:☁️ SPACEMOBILE-006
 LOCATION:Kyushu University Pegasus Telescope
@@ -1366,24 +1339,24 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=67232
- &startUTC=2026-05-27T12:41:40&endUTC=2026-05-27T12:44:56&step=1&lstHour=9&
+ &startUTC=2026-05-27T12:41:39&endUTC=2026-05-27T12:44:56&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nSPACEMOBILE-006 | NORAD ID 67
- 232\n================================\nMag : None\nDuration : 3 min 15 sec
- \nPass start : 21:41:40 (el=10.0° / NNW)\nHighest : 21:44:56 (el=36.0° / N
+ 232\n================================\nMag : None\nDuration : 3 min 17 sec
+ \nPass start : 21:41:39 (el=10.0° / NNW)\nHighest : 21:44:56 (el=36.0° / N
  NE)\nPass end : 21:44:56 (el=36.0° / NNE)\n-------------------------------
  ---------\nSunset : 19:16\nAstronomical dusk : 21:00\nAstronomical dawn : 
  03:31\nSunrise : 05:15\n----------------------------------------\n☁️ Overc
  ast\nClouds : 100% (L:100 M:53 H:0)\nTemperature : 22 °C\nWind : 2.1 m/s\n
  Note : Weather data is updated every 24 hours\n---------------------------
  -------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026
- -05-24T08:01:41 (UTC)\n================================\nSSDL SatPass Noti
+ -05-24T09:01:34 (UTC)\n================================\nSSDL SatPass Noti
  fication System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira 
  - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:67232.61188.5@SatPass
-DTSTAMP:20260524T080134Z
+DTSTAMP:20260524T090128Z
 DTSTART;TZID=Asia/Tokyo:20260528T212332
 DTEND;TZID=Asia/Tokyo:20260528T212726
 SUMMARY:⛅ SPACEMOBILE-006
@@ -1397,22 +1370,22 @@ URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  lstMin=0&run=True
 DESCRIPTION:================================\nSPACEMOBILE-006 | NORAD ID 67
  232\n================================\nMag : None\nDuration : 3 min 53 sec
- \nPass start : 21:23:32 (el=10.0° / NNW)\nHighest : 21:27:13 (el=40.0° / N
+ \nPass start : 21:23:32 (el=10.0° / NNW)\nHighest : 21:27:12 (el=40.0° / N
  E)\nPass end : 21:27:26 (el=40.0° / NE)\n---------------------------------
  -------\nSunset : 19:17\nAstronomical dusk : 21:01\nAstronomical dawn : 03
  :30\nSunrise : 05:15\n----------------------------------------\n⛅ Partly c
  loudy\nClouds : 71% (L:71 M:19 H:0)\nTemperature : 20 °C\nWind : 2.6 m/s\n
  Note : Weather data is updated every 24 hours\n---------------------------
  -------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026
- -05-24T08:01:41 (UTC)\n================================\nSSDL SatPass Noti
+ -05-24T09:01:34 (UTC)\n================================\nSSDL SatPass Noti
  fication System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira 
  - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:67232.61189.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260529T210525
-DTEND;TZID=Asia/Tokyo:20260529T210959
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260529T210524
+DTEND;TZID=Asia/Tokyo:20260529T210958
 SUMMARY:🌤️ SPACEMOBILE-006
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -1420,26 +1393,26 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=67232
- &startUTC=2026-05-29T12:05:25&endUTC=2026-05-29T12:09:59&step=1&lstHour=9&
+ &startUTC=2026-05-29T12:05:24&endUTC=2026-05-29T12:09:58&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nSPACEMOBILE-006 | NORAD ID 67
  232\n================================\nMag : None\nDuration : 4 min 34 sec
- \nPass start : 21:05:25 (el=10.0° / NNW)\nHighest : 21:09:08 (el=43.0° / N
- E)\nPass end : 21:09:59 (el=37.0° / ENE)\n--------------------------------
+ \nPass start : 21:05:24 (el=10.0° / NNW)\nHighest : 21:09:07 (el=43.0° / N
+ E)\nPass end : 21:09:58 (el=37.0° / ENE)\n--------------------------------
  --------\nSunset : 19:17\nAstronomical dusk : 21:02\nAstronomical dawn : 0
  3:30\nSunrise : 05:15\n----------------------------------------\n🌤️ Clear 
  with few low clouds\nClouds : 12% (L:12 M:2 H:0)\nTemperature : 20 °C\nWin
  d : 1.5 m/s\nNote : Weather data is updated every 24 hours\n--------------
  --------------------------\nData Provided by Heavens-Above / Meteoblue\nUp
- dated at 2026-05-24T08:01:41 (UTC)\n================================\nSSDL
+ dated at 2026-05-24T09:01:35 (UTC)\n================================\nSSDL
   SatPass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyo
  aki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:67232.61190.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260530T204717
-DTEND;TZID=Asia/Tokyo:20260530T205234
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260530T204716
+DTEND;TZID=Asia/Tokyo:20260530T205233
 SUMMARY:☀️ SPACEMOBILE-006
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -1447,26 +1420,26 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=67232
- &startUTC=2026-05-30T11:47:17&endUTC=2026-05-30T11:52:34&step=1&lstHour=9&
+ &startUTC=2026-05-30T11:47:16&endUTC=2026-05-30T11:52:33&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nSPACEMOBILE-006 | NORAD ID 67
  232\n================================\nMag : None\nDuration : 5 min 17 sec
- \nPass start : 20:47:17 (el=10.0° / NNW)\nHighest : 20:51:02 (el=47.0° / N
- E)\nPass end : 20:52:34 (el=30.0° / E)\n----------------------------------
+ \nPass start : 20:47:16 (el=10.0° / NNW)\nHighest : 20:51:02 (el=47.0° / N
+ E)\nPass end : 20:52:33 (el=30.0° / E)\n----------------------------------
  ------\nSunset : 19:18\nAstronomical dusk : 21:03\nAstronomical dawn : 03:
  29\nSunrise : 05:14\n----------------------------------------\n☀️ Clear\, 
  cloudless sky\nClouds : 0% (L:0 M:0 H:0)\nTemperature : 21 °C\nWind : 1.6 
  m/s\nNote : Weather data is updated every 24 hours\n----------------------
  ------------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at
-  2026-05-24T08:01:41 (UTC)\n================================\nSSDL SatPass
+  2026-05-24T09:01:35 (UTC)\n================================\nSSDL SatPass
   Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okud
  aira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:67232.61191.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260531T202909
-DTEND;TZID=Asia/Tokyo:20260531T203513
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260531T202908
+DTEND;TZID=Asia/Tokyo:20260531T203512
 SUMMARY:☀️ SPACEMOBILE-006
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -1474,26 +1447,26 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=67232
- &startUTC=2026-05-31T11:29:09&endUTC=2026-05-31T11:35:13&step=1&lstHour=9&
+ &startUTC=2026-05-31T11:29:08&endUTC=2026-05-31T11:35:12&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nSPACEMOBILE-006 | NORAD ID 67
- 232\n================================\nMag : None\nDuration : 6 min 4 sec\
- nPass start : 20:29:09 (el=10.0° / NW)\nHighest : 20:32:57 (el=52.0° / NE)
- \nPass end : 20:35:13 (el=22.0° / ESE)\n----------------------------------
+ 232\n================================\nMag : None\nDuration : 6 min 3 sec\
+ nPass start : 20:29:08 (el=10.0° / NW)\nHighest : 20:32:56 (el=52.0° / NE)
+ \nPass end : 20:35:12 (el=22.0° / ESE)\n----------------------------------
  ------\nSunset : 19:18\nAstronomical dusk : 21:04\nAstronomical dawn : 03:
  29\nSunrise : 05:14\n----------------------------------------\n☀️ Clear\, 
  few cirrus\nClouds : 3% (L:0 M:0 H:10)\nTemperature : 23 °C\nWind : 0.4 m/
  s\nNote : Weather data is updated every 24 hours\n------------------------
  ----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2
- 026-05-24T08:01:41 (UTC)\n================================\nSSDL SatPass N
+ 026-05-24T09:01:35 (UTC)\n================================\nSSDL SatPass N
  otification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudai
  ra - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:67232.61192.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260601T201101
-DTEND;TZID=Asia/Tokyo:20260601T201756
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260601T201100
+DTEND;TZID=Asia/Tokyo:20260601T201755
 SUMMARY:☀️ SPACEMOBILE-006
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -1501,26 +1474,26 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=67232
- &startUTC=2026-06-01T11:11:01&endUTC=2026-06-01T11:17:56&step=1&lstHour=9&
+ &startUTC=2026-06-01T11:11:00&endUTC=2026-06-01T11:17:55&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nSPACEMOBILE-006 | NORAD ID 67
- 232\n================================\nMag : None\nDuration : 6 min 55 sec
- \nPass start : 20:11:01 (el=10.0° / NW)\nHighest : 20:14:50 (el=57.0° / NE
- )\nPass end : 20:17:56 (el=15.0° / ESE)\n---------------------------------
+ 232\n================================\nMag : None\nDuration : 6 min 54 sec
+ \nPass start : 20:11:00 (el=10.0° / NW)\nHighest : 20:14:49 (el=57.0° / NE
+ )\nPass end : 20:17:55 (el=15.0° / ESE)\n---------------------------------
  -------\nSunset : 19:19\nAstronomical dusk : 21:05\nAstronomical dawn : 03
  :28\nSunrise : 05:14\n----------------------------------------\n☀️ Clear w
  ith cirrus\nClouds : 30% (L:0 M:0 H:100)\nTemperature : 24 °C\nWind : 0.1 
  m/s\nNote : Weather data is updated every 24 hours\n----------------------
  ------------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at
-  2026-05-24T08:01:41 (UTC)\n================================\nSSDL SatPass
+  2026-05-24T09:01:35 (UTC)\n================================\nSSDL SatPass
   Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okud
  aira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:67232.61193.5@SatPass
-DTSTAMP:20260524T080134Z
-DTSTART;TZID=Asia/Tokyo:20260602T195253
-DTEND;TZID=Asia/Tokyo:20260602T200034
+DTSTAMP:20260524T090128Z
+DTSTART;TZID=Asia/Tokyo:20260602T195252
+DTEND;TZID=Asia/Tokyo:20260602T200032
 SUMMARY:☀️ SPACEMOBILE-006
 LOCATION:Kyushu University Pegasus Telescope
 GEO:33.598889;130.211667
@@ -1528,18 +1501,18 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=72;X-TITLE=Kyushu Univ
  ersity Pegasus Telescope:geo:33.598889,130.211667
 URL:https://app.kiyoaki.jp/SatPhotometry-Palnner/SP-Planner.html?lon=130.21
  17&latitude=33.5989&altitude=73&waveLength=5e-5&aperture=0.508&norad=67232
- &startUTC=2026-06-02T10:52:53&endUTC=2026-06-02T11:00:34&step=1&lstHour=9&
+ &startUTC=2026-06-02T10:52:52&endUTC=2026-06-02T11:00:32&step=1&lstHour=9&
  lstMin=0&run=True
 DESCRIPTION:================================\nSPACEMOBILE-006 | NORAD ID 67
  232\n================================\nMag : None\nDuration : 7 min 40 sec
- \nPass start : 19:52:53 (el=10.0° / NW)\nHighest : 19:56:44 (el=62.0° / NE
- )\nPass end : 20:00:34 (el=10.0° / SE)\n----------------------------------
+ \nPass start : 19:52:52 (el=10.0° / NW)\nHighest : 19:56:43 (el=62.0° / NE
+ )\nPass end : 20:00:32 (el=10.0° / SE)\n----------------------------------
  ------\nSunset : 19:20\nAstronomical dusk : 21:06\nAstronomical dawn : 03:
  28\nSunrise : 05:14\n----------------------------------------\n☀️ Clear wi
  th cirrus\nClouds : 30% (L:0 M:0 H:100)\nTemperature : 24 °C\nWind : 0.3 m
  /s\nNote : Weather data is updated every 24 hours\n-----------------------
  -----------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 
- 2026-05-24T08:01:42 (UTC)\n================================\nSSDL SatPass 
+ 2026-05-24T09:01:35 (UTC)\n================================\nSSDL SatPass 
  Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okuda
  ira - Kyushu University\n================================
 END:VEVENT
