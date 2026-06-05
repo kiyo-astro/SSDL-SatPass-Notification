@@ -6,7 +6,7 @@ METHOD:PUBLISH
 X-WR-CALNAME:Satellite Passes
 BEGIN:VEVENT
 UID:59588.61200.6@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260609T235559
 DTEND;TZID=Asia/Tokyo:20260609T235928
 SUMMARY:🌤️ ACS3
@@ -27,13 +27,13 @@ DESCRIPTION:================================\nACS3 | NORAD ID 59588\n======
  w clouds and cirrus\nClouds : 30% (L:8 M:26 H:100)\nTemperature : 20 °C\nW
  ind : 0.9 m/s\nNote : Weather data is updated every 24 hours\n------------
  ----------------------------\nData Provided by Heavens-Above / Meteoblue\n
- Updated at 2026-06-05T13:01:43 (UTC)\n================================\nSS
+ Updated at 2026-06-05T17:01:34 (UTC)\n================================\nSS
  DL SatPass Notification System\n - with SatPhotometry Library\n(c) 2026 Ki
  yoaki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:59588.61201.6@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260611T000240
 DTEND;TZID=Asia/Tokyo:20260611T000628
 SUMMARY:☀️ ACS3
@@ -54,13 +54,13 @@ DESCRIPTION:================================\nACS3 | NORAD ID 59588\n======
   sky\nClouds : 0% (L:0 M:0 H:1)\nTemperature : 20 °C\nWind : 1.6 m/s\nNote
   : Weather data is updated every 24 hours\n-------------------------------
  ---------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-06-
- 05T13:01:43 (UTC)\n================================\nSSDL SatPass Notifica
+ 05T17:01:34 (UTC)\n================================\nSSDL SatPass Notifica
  tion System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - Ky
  ushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:59588.61202.6@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260612T000918
 DTEND;TZID=Asia/Tokyo:20260612T001321
 SUMMARY:☁️ ACS3
@@ -81,13 +81,13 @@ DESCRIPTION:================================\nACS3 | NORAD ID 59588\n======
  cirrus\nClouds : 79% (L:0 M:79 H:100)\nTemperature : 19 °C\nWind : 1.3 m/s
  \nNote : Weather data is updated every 24 hours\n-------------------------
  ---------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 20
- 26-06-05T13:01:44 (UTC)\n================================\nSSDL SatPass No
+ 26-06-05T17:01:34 (UTC)\n================================\nSSDL SatPass No
  tification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudair
  a - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:59588.61203.6@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260613T001552
 DTEND;TZID=Asia/Tokyo:20260613T002007
 SUMMARY:☀️ ACS3
@@ -108,13 +108,13 @@ DESCRIPTION:================================\nACS3 | NORAD ID 59588\n======
  Clouds : 29% (L:0 M:0 H:99)\nTemperature : 21 °C\nWind : 0.7 m/s\nNote : W
  eather data is updated every 24 hours\n-----------------------------------
  -----\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-06-05T1
- 3:01:44 (UTC)\n================================\nSSDL SatPass Notification
+ 7:01:34 (UTC)\n================================\nSSDL SatPass Notification
   System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - Kyushu
   University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:53807.61200.5@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260609T215038
 DTEND;TZID=Asia/Tokyo:20260609T215319
 SUMMARY:⛅ BLUEWALKER-3
@@ -135,13 +135,13 @@ DESCRIPTION:================================\nBLUEWALKER-3 | NORAD ID 53807
  dy and cirrus\nClouds : 50% (L:12 M:50 H:100)\nTemperature : 20 °C\nWind :
   1.1 m/s\nNote : Weather data is updated every 24 hours\n-----------------
  -----------------------\nData Provided by Heavens-Above / Meteoblue\nUpdat
- ed at 2026-06-05T13:01:44 (UTC)\n================================\nSSDL Sa
+ ed at 2026-06-05T17:01:34 (UTC)\n================================\nSSDL Sa
  tPass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki
   Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:53807.61201.5@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260610T211333
 DTEND;TZID=Asia/Tokyo:20260610T211735
 SUMMARY:☀️ BLUEWALKER-3
@@ -162,13 +162,13 @@ DESCRIPTION:================================\nBLUEWALKER-3 | NORAD ID 53807
  ess sky\nClouds : 0% (L:0 M:0 H:0)\nTemperature : 21 °C\nWind : 1.8 m/s\nN
  ote : Weather data is updated every 24 hours\n----------------------------
  ------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-
- 06-05T13:01:44 (UTC)\n================================\nSSDL SatPass Notif
+ 06-05T17:01:34 (UTC)\n================================\nSSDL SatPass Notif
  ication System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira -
   Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:53807.61202.5@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260611T203631
 DTEND;TZID=Asia/Tokyo:20260611T204153
 SUMMARY:🌤️ BLUEWALKER-3
@@ -189,13 +189,13 @@ DESCRIPTION:================================\nBLUEWALKER-3 | NORAD ID 53807
   few low clouds and cirrus\nClouds : 22% (L:5 M:21 H:75)\nTemperature : 21
   °C\nWind : 1.5 m/s\nNote : Weather data is updated every 24 hours\n------
  ----------------------------------\nData Provided by Heavens-Above / Meteo
- blue\nUpdated at 2026-06-05T13:01:44 (UTC)\n==============================
+ blue\nUpdated at 2026-06-05T17:01:35 (UTC)\n==============================
  ==\nSSDL SatPass Notification System\n - with SatPhotometry Library\n(c) 2
  026 Kiyoaki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:53807.61203.5@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260612T195932
 DTEND;TZID=Asia/Tokyo:20260612T200600
 SUMMARY:☀️ BLUEWALKER-3
@@ -216,13 +216,13 @@ DESCRIPTION:================================\nBLUEWALKER-3 | NORAD ID 53807
   cirrus\nClouds : 30% (L:0 M:0 H:100)\nTemperature : 24 °C\nWind : 1.1 m/s
  \nNote : Weather data is updated every 24 hours\n-------------------------
  ---------------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 20
- 26-06-05T13:01:44 (UTC)\n================================\nSSDL SatPass No
+ 26-06-05T17:01:35 (UTC)\n================================\nSSDL SatPass No
  tification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudair
  a - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:53807.61204.5@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260613T205952
 DTEND;TZID=Asia/Tokyo:20260613T210418
 SUMMARY:🌤️ BLUEWALKER-3
@@ -243,13 +243,13 @@ DESCRIPTION:================================\nBLUEWALKER-3 | NORAD ID 53807
   few low clouds and cirrus\nClouds : 29% (L:10 M:0 H:99)\nTemperature : 23
   °C\nWind : 1.2 m/s\nNote : Weather data is updated every 24 hours\n------
  ----------------------------------\nData Provided by Heavens-Above / Meteo
- blue\nUpdated at 2026-06-05T13:01:44 (UTC)\n==============================
+ blue\nUpdated at 2026-06-05T17:01:35 (UTC)\n==============================
  ==\nSSDL SatPass Notification System\n - with SatPhotometry Library\n(c) 2
  026 Kiyoaki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:53807.61205.5@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260614T202228
 DTEND;TZID=Asia/Tokyo:20260614T202847
 SUMMARY:☁️ BLUEWALKER-3
@@ -270,13 +270,13 @@ DESCRIPTION:================================\nBLUEWALKER-3 | NORAD ID 53807
  Clouds : 100% (L:100 M:0 H:100)\nTemperature : 23 °C\nWind : 1.6 m/s\nNote
   : Weather data is updated every 24 hours\n-------------------------------
  ---------\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-06-
- 05T13:01:45 (UTC)\n================================\nSSDL SatPass Notifica
+ 05T17:01:35 (UTC)\n================================\nSSDL SatPass Notifica
  tion System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - Ky
  ushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:20580.61201.5@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260610T210908
 DTEND;TZID=Asia/Tokyo:20260610T211222
 SUMMARY:☀️ HST
@@ -296,14 +296,14 @@ DESCRIPTION:================================\nHST | NORAD ID 20580\n=======
  05:12\n----------------------------------------\n☀️ Clear\, cloudless sky\
  nClouds : 0% (L:0 M:0 H:0)\nTemperature : 21 °C\nWind : 1.8 m/s\nNote : We
  ather data is updated every 24 hours\n------------------------------------
- ----\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-06-05T13
- :01:45 (UTC)\n================================\nSSDL SatPass Notification 
+ ----\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-06-05T17
+ :01:35 (UTC)\n================================\nSSDL SatPass Notification 
  System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - Kyushu 
  University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:20580.61202.5@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260611T203722
 DTEND;TZID=Asia/Tokyo:20260611T204228
 SUMMARY:🌤️ HST
@@ -324,13 +324,13 @@ DESCRIPTION:================================\nHST | NORAD ID 20580\n=======
  uds and cirrus\nClouds : 22% (L:5 M:21 H:75)\nTemperature : 21 °C\nWind : 
  1.5 m/s\nNote : Weather data is updated every 24 hours\n------------------
  ----------------------\nData Provided by Heavens-Above / Meteoblue\nUpdate
- d at 2026-06-05T13:01:45 (UTC)\n================================\nSSDL Sat
+ d at 2026-06-05T17:01:35 (UTC)\n================================\nSSDL Sat
  Pass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki 
  Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:20580.61203.5@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260612T200535
 DTEND;TZID=Asia/Tokyo:20260612T201226
 SUMMARY:☀️ HST
@@ -351,13 +351,13 @@ DESCRIPTION:================================\nHST | NORAD ID 20580\n=======
  louds : 30% (L:0 M:0 H:100)\nTemperature : 23 °C\nWind : 0.5 m/s\nNote : W
  eather data is updated every 24 hours\n-----------------------------------
  -----\nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-06-05T1
- 3:01:45 (UTC)\n================================\nSSDL SatPass Notification
+ 7:01:35 (UTC)\n================================\nSSDL SatPass Notification
   System\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - Kyushu
   University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:20580.61204.5@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260613T211321
 DTEND;TZID=Asia/Tokyo:20260613T211620
 SUMMARY:🌤️ HST
@@ -378,13 +378,13 @@ DESCRIPTION:================================\nHST | NORAD ID 20580\n=======
   clouds and cirrus\nClouds : 29% (L:10 M:0 H:99)\nTemperature : 22 °C\nWin
  d : 1.3 m/s\nNote : Weather data is updated every 24 hours\n--------------
  --------------------------\nData Provided by Heavens-Above / Meteoblue\nUp
- dated at 2026-06-05T13:01:45 (UTC)\n================================\nSSDL
+ dated at 2026-06-05T17:01:35 (UTC)\n================================\nSSDL
   SatPass Notification System\n - with SatPhotometry Library\n(c) 2026 Kiyo
  aki Okudaira - Kyushu University\n================================
 END:VEVENT
 BEGIN:VEVENT
 UID:20580.61205.5@SatPass
-DTSTAMP:20260605T130143Z
+DTSTAMP:20260605T170134Z
 DTSTART;TZID=Asia/Tokyo:20260614T204133
 DTEND;TZID=Asia/Tokyo:20260614T204610
 SUMMARY:☁️ HST
@@ -404,8 +404,8 @@ DESCRIPTION:================================\nHST | NORAD ID 20580\n=======
  : 05:13\n----------------------------------------\n☁️ Overcast\nClouds : 1
  00% (L:100 M:0 H:100)\nTemperature : 23 °C\nWind : 1.6 m/s\nNote : Weather
   data is updated every 24 hours\n----------------------------------------\
- nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-06-05T13:01:4
- 5 (UTC)\n================================\nSSDL SatPass Notification Syste
+ nData Provided by Heavens-Above / Meteoblue\nUpdated at 2026-06-05T17:01:3
+ 6 (UTC)\n================================\nSSDL SatPass Notification Syste
  m\n - with SatPhotometry Library\n(c) 2026 Kiyoaki Okudaira - Kyushu Unive
  rsity\n================================
 END:VEVENT
